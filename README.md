@@ -154,4 +154,6 @@ Here are some screenshots of the running NYDAX , if you are succefull in your de
 ![NYDAX Screenshot](/images/NYDAX11.png)
 ![NYDAX Screenshot](/images/NYDAX12.png)
 ![NYDAX Screenshot](/images/NYDAX13.png)
+>Token Info Page
+![NYDAX Screenshot](/images/NYDAX14.png)
 
