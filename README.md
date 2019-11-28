@@ -2,7 +2,7 @@
 IXP  - Digital Asset Trading Platform and Exchange, open source crypto currency exchange
 
 
-![IXP Screenshot](/images/NYDAX5.png)
+![NYDAX Dashboard](/images/NYDAX5.png)
 
 NYDAX is an Enterprise grade Digital Asset Exchange Platform, Originally developed under a project called Innovation Netwrok and then used to power NYDAX Digital Asset Exchange, We have decided to make the source code avaiable to public so that other users can benefit from it, Code is been provided as it is and we are not suggesting to use this code for production environment, however it gives you a good base to start with. If you want service support on this code please contact us through hello at nydax.com
 
@@ -133,4 +133,25 @@ export NODEMAILER_PASS=#updateMe
 
 if you have any question, please join telegram discussion group   https://t.me/nydax
 
+
+
+Here are some screenshots of the running NYDAX , if you are succefull in your deployment you should be seeing this :
+
+![NYDAX Screenshot](/images/NYDAX1.png)
+
+![NYDAX Screenshot](/images/NYDAX2.png)
+
+![NYDAX Screenshot](/images/NYDAX3.png)
+
+![NYDAX Screenshot](/images/NYDAX4.png)
+
+![NYDAX Screenshot](/images/NYDAX5.png)
+![NYDAX Screenshot](/images/NYDAX6.png)
+![NYDAX Screenshot](/images/NYDAX7.png)
+![NYDAX Screenshot](/images/NYDAX8.png)
+![NYDAX Screenshot](/images/NYDAX9.png)
+![NYDAX Screenshot](/images/NYDAX10.png)
+![NYDAX Screenshot](/images/NYDAX11.png)
+![NYDAX Screenshot](/images/NYDAX12.png)
+![NYDAX Screenshot](/images/NYDAX13.png)
 
