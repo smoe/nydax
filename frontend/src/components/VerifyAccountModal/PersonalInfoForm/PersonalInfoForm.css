@@ -1,0 +1,61 @@
+@import '../../variables.css';
+
+.headerTitle {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.formInline {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.description {
+  color: var(--sub-title-color);
+  text-align: center;
+}
+
+.customBtn {
+  border-radius: 2px !important;
+  color: white !important;
+  border: 0 !important;
+  height: 40px;
+  background-color: #7577ff !important;
+  width: 80%;
+  margin: 10px 0;
+}
+
+.label {
+  color: #363a4c;
+}
+
+.customInput {
+  input {
+    border-color: #ced3e3 !important;
+    color: #363a4c !important;
+    background-color: white !important;
+    border: 1px solid;
+    border-radius: 2px !important;
+    height: 45px;
+  }
+}
+
+.modalBody {
+  padding: 40;
+  padding-top: 15;
+}
+
+.middleName {
+  margin-top: 25;
+  margin-left: 5;
+  width: 50%;
+}

@@ -1,0 +1,65 @@
+@import '../variables.css';
+
+.divider {
+  width: 100%;
+  height: 2px;
+}
+
+.customPanel {
+  margin-bottom: 0 !important;
+  border-radius: 2px;
+  box-shadow: 0 2px 9px 1px rgba(0, 0, 0, 0.2);
+  border-color: transparent !important;
+
+  &.light {
+    background-color: var(--background-light);
+
+    .divider {
+      background-color: var(--divider-light);
+    }
+  }
+
+  &.dark {
+    background-color: var(--background-dark);
+
+    .divider {
+      background-color: var(--divider-dark);
+    }
+  }
+
+  &.darkCmc {
+    background-color: var(--background-darkCmc);
+
+    .divider {
+      background-color: var(--divider-darkCmc);
+    }
+  }
+
+  &::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  .panelTitle {
+    color: #7577ff;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    height: 38px;
+    padding-left: 7px;
+    display: flex;
+    align-items: center;
+  }
+}

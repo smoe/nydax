@@ -1,0 +1,137 @@
+@import '../../variables.css';
+
+.searchCustomInput {
+  margin-bottom: 0;
+
+  input {
+    height: 38px;
+    border-radius: 0 !important;
+    color: var(--sub-title-color);
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    box-shadow: none;
+    padding-left: 5px;
+
+    &:focus {
+      box-shadow: none !important;
+    }
+  }
+
+  .inputIcon {
+    border-right: 0;
+    border-left: 0;
+    border-top: 0;
+    border-radius: 0;
+    background: transparent;
+    padding-right: 0;
+    color: var(--sub-title-color);
+  }
+
+  &.light {
+    input,
+    .inputIcon {
+      background-color: var(--background-light);
+      border-color: var(--border-light);
+    }
+  }
+
+  &.dark {
+    input,
+    .inputIcon {
+      background-color: var(--background-dark);
+      border-color: var(--border-dark);
+    }
+  }
+
+  &.darkCmc {
+    input,
+    .inputIcon {
+      background-color: var(--background-darkCmc);
+      border-color: var(--border-darkCmc);
+    }
+  }
+
+  .form-control:focus {
+    border-color: #3c4563;
+    outline: 0;
+    box-shadow: none !important;
+  }
+
+  .search-icon {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    pointer-events: all;
+    cursor: pointer;
+  }
+}
+
+.searchContainer {
+  display: flex;
+
+  &.inHeader {
+    position: absolute;
+    top: 3px;
+    right: 20px;
+    width: 40%;
+
+    input {
+      height: 30px !important;
+    }
+  }
+
+  .search {
+    width: 100%;
+  }
+
+  .filter {
+    /* border-radius: 1px; */
+    color: var(--sub-title-color);
+
+    .filterBtn {
+      font-size: 14px;
+      height: 50px;
+
+      &.light {
+        background-color: var(--background-light);
+        border-color: var(--border-light);
+        color: var(--text-light);
+      }
+
+      &.dark {
+        background-color: var(--background-dark);
+        border-color: var(--border-dark);
+        color: var(--text-dark);
+      }
+
+      &.darkCmc {
+        background-color: var(--background-darkCmc);
+        border-color: var(--border-darkCmc);
+        color: var(--text-darkCmc);
+      }
+    }
+
+    .filterBtn:focus,
+    .filterBtn.active.focus,
+    .filterBtn.active:focus,
+    .filterBtn.focus,
+    .filterBtn:active.focus,
+    .filterBtn:active:focus, {
+      outline: 0;
+      outline-offset: -2px;
+    }
+  }
+}
+
+@media (--sm-viewport) {
+  .searchContainer {
+    &.inHeader {
+      position: unset;
+      top: auto;
+      right: auto;
+      width: 100%;
+    }
+  }
+}

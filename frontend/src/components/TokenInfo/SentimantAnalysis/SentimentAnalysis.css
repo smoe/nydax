@@ -1,0 +1,124 @@
+@import '../../variables.css';
+
+.verticalDashedDivider {
+  width: 1px;
+  height: 240px;
+  border-left: 2px dashed #7476f971;
+}
+
+.chartContainer {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.rightTop {
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: right;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+
+.leftTop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.rightBottom {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  text-align: right;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
+.leftBottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+.red {
+  color: #ff9565 !important;
+}
+
+.green {
+  color: #7cdcb5 !important;
+}
+
+.white {
+  color: white !important;
+}
+
+.root {
+  &.light {
+    .rightTop p {
+      color: var(--text-light);
+    }
+
+    .leftTop p {
+      color: var(--text-light);
+    }
+
+    .rightBottom p {
+      color: var(--text-light);
+    }
+
+    .leftBottom p {
+      color: var(--text-light);
+    }
+  }
+
+  &.dark {
+    .rightTop p {
+      color: var(--text-dark);
+    }
+
+    .leftTop p {
+      color: var(--text-dark);
+    }
+
+    .rightBottom p {
+      color: var(--text-dark);
+    }
+
+    .leftBottom p {
+      color: var(--text-dark);
+    }
+  }
+
+  &.darkCmc {
+    .rightTop p {
+      color: var(--text-darkCmc);
+    }
+
+    .leftTop p {
+      color: var(--text-darkCmc);
+    }
+
+    .rightBottom p {
+      color: var(--text-darkCmc);
+    }
+
+    .leftBottom p {
+      color: var(--text-darkCmc);
+    }
+  }
+}
+
+@media (--xs-viewport) {
+  p {
+    font-size: 12px !important;
+  }
+}

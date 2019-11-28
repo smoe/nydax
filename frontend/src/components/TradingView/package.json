@@ -1,0 +1,6 @@
+{
+  "name": "TradingView",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./TradingView.js"
+}

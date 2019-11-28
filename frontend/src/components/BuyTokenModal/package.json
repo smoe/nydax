@@ -1,0 +1,6 @@
+{
+  "name": "BuyTokenModal",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./BuyTokenModal.js"
+}

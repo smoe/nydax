@@ -1,0 +1,50 @@
+@import '../../components/variables.css';
+
+.root {
+  min-height: 100vh;
+  width: 100%;
+  background: #252d47;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  flex-direction: column;
+
+  .errorContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    p {
+      font-size: 150px;
+      color: #e21424;
+    }
+
+    /* img {
+      height: 100px;
+      width: 100px;
+    } */
+  }
+
+  .messageContainer {
+    font-size: 20px;
+  }
+
+  .backButton {
+    line-height: 40px;
+    text-align: center;
+    color: white;
+    padding-right: 5%;
+    padding-left: 5%;
+    border: 1px solid #7577ff;
+    border-radius: 4px;
+    background-color: #7577ff;
+    outline: 0;
+  }
+
+  .footer {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 10px;
+  }
+}

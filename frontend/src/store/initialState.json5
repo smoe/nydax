@@ -1,0 +1,800 @@
+{
+  theme: "dark",
+  countries: [{id: 1, name: "Iran", phoneCode: "+98"}],
+  currencies: [{ id: 1, name: 'United Arab Emirates Dirham', abbreviation: 'AED', symbol: '', usdRatio: ''}],
+  timezones: [{ id: 1, name: 'tz1' }],
+  userInfo: {
+    authToken: '',
+    authStatus: {
+      twoFAEnabled: false,
+      smsEnabled: false,
+      twoFactorAuthSecret: '',
+      qrUrl: '',
+      phoneNumber: "",
+    },
+    profile: {
+      firstName: "",
+      lastName: "",
+      email: "test@nydax.com",
+      timezoneId: 1,
+      baseCurrencyId: 1,
+      profilePicUrl: "",
+      referralToken: 'xd2ksl326',
+    },
+    sessions: [
+      {
+        id: 1,
+        lastSignIn: "About 2 hours ago",
+        browser: "Safari",
+        ipAddress: "192.95.47.197",
+        location: "Montreal-CA",
+        isCurrentSession: true,
+      },
+      {
+        id: 2,
+        lastSignIn: "About 2 hours ago",
+        browser: "Safari",
+        ipAddress: "192.95.47.197",
+        location: "Montreal-CA",
+        isCurrentSession: false,
+      },
+    ],
+    accountActivity: [
+      {
+        id: 2,
+        time: "About 2 hours ago",
+        browser: "Safari",
+        ipAddress: "192.95.47.197",
+        location: "Montreal-CA",
+        action: "Successfull login",
+      },
+    ],
+    wallets: [
+      {
+        id: 1,
+        tokenId: 1,
+        address: "0xB5b64f4c655F485F7660c649f94EC33534B8E8eB",
+        balance: 230,
+        reservedBalance: 0,
+      },
+      {
+        id: 2,
+        tokenId: 2,
+        address: "0xB5b64f4c655F485F7660c649f94EC33534B8E8eB",
+        balance: 320,
+        reservedBalance: 0,
+      },
+      {
+        id: 3,
+        tokenId: 3,
+        address: "0xB5b64f4c655F485F7660c649f94EC33534B8E8eB",
+        balance: 320,
+        reservedBalance: 0,
+      }
+    ],
+    transactionHistory: {
+      withdraw: [
+        {
+          tokenId: 1,
+          amount: 5,
+          sourceWallet: {
+            tokenId: 1,
+          },
+          destinationWallet: {
+            address: '0xsdfljhadf65asd4f654ac6sd5v16a5sd4vc1',
+          },
+          createdAt: 1548763864757,
+          statusId: 2,
+          txHash: '0xsdfljhadf65asd4f654ac6sd5v16a5sd4vc1',
+        },
+        {
+          tokenId: 1,
+          amount: 5,
+          sourceWallet: {
+            tokenId: 1,
+          },
+          destinationWallet: {
+            address: '0xsdfljhadf65asd4f654ac6sd5v16a5sd4vc1',
+          },
+          createdAt: 1548763864757,
+          statusId: 4,
+          txHash: '0xsdfljhadf65asd4f654ac6sd5v16a5sd4vc1',
+        },
+        {
+          tokenId: 1,
+          amount: 5,
+          sourceWallet: {
+            tokenId: 1,
+          },
+          destinationWallet: {
+            address: '0xsdfljhadf65asd4f654ac6sd5v16a5sd4vc1',
+          },
+          createdAt: 1548763864757,
+          statusId: 5,
+          txHash: '0xsdfljhadf65asd4f654ac6sd5v16a5sd4vc1',
+        },
+        {
+          tokenId: 1,
+          amount: 5,
+          sourceWallet: {
+            tokenId: 1,
+          },
+          destinationWallet: {
+            address: '0xsdfljhadf65asd4f654ac6sd5v16a5sd4vc1',
+          },
+          createdAt: 1548763864757,
+          statusId: 2,
+          txHash: '0xsdfljhadf65asd4f654ac6sd5v16a5sd4vc1',
+        },
+        {
+          tokenId: 1,
+          amount: 5,
+          sourceWallet: {
+            tokenId: 1,
+          },
+          destinationWallet: {
+            address: '0xsdfljhadf65asd4f654ac6sd5v16a5sd4vc1',
+          },
+          createdAt: 1548763864757,
+          statusId: 2,
+          txHash: '0xsdfljhadf65asd4f654ac6sd5v16a5sd4vc1',
+        },
+        {
+          tokenId: 1,
+          amount: 5,
+          sourceWallet: {
+            tokenId: 1,
+          },
+          destinationWallet: {
+            address: '0xsdfljhadf65asd4f654ac6sd5v16a5sd4vc1',
+          },
+          createdAt: 1548763864757,
+          statusId: 2,
+          txHash: '0xsdfljhadf65asd4f654ac6sd5v16a5sd4vc1',
+        },
+        {
+          tokenId: 1,
+          amount: 5,
+          sourceWallet: {
+            tokenId: 1,
+          },
+          destinationWallet: {
+            address: '0xsdfljhadf65asd4f654ac6sd5v16a5sd4vc1',
+          },
+          createdAt: 1548763864757,
+          statusId: 2,
+          txHash: '0xsdfljhadf65asd4f654ac6sd5v16a5sd4vc1',
+        },
+        {
+          tokenId: 1,
+          amount: 5,
+          sourceWallet: {
+            tokenId: 1,
+          },
+          destinationWallet: {
+            address: '0xsdfljhadf65asd4f654ac6sd5v16a5sd4vc1',
+          },
+          createdAt: 1548763864757,
+          statusId: 2,
+          txHash: '0xsdfljhadf65asd4f654ac6sd5v16a5sd4vc1',
+        },
+        {
+          tokenId: 1,
+          amount: 5,
+          sourceWallet: {
+            tokenId: 1,
+          },
+          destinationWallet: {
+            address: '0xsdfljhadf65asd4f654ac6sd5v16a5sd4vc1',
+          },
+          createdAt: 1548763864757,
+          statusId: 2,
+          txHash: '0xsdfljhadf65asd4f654ac6sd5v16a5sd4vc1',
+        }
+      ],
+      deposit: [
+        {
+          tokenId: 1,
+          amount: 5,
+          sourceWallet: {
+            tokenId: 1,
+          },
+          destinationWallet: {
+            address: '0xsdfljhadf65asd4f654ac6sd5v16a5sd4vc1',
+          },
+          createdAt: 1548763864757,
+          statusId: 2,
+          txHash: '0xsdfljhadf65asd4f654ac6sd5v16a5sd4vc1',
+        },
+        {
+          tokenId: 1,
+          amount: 5,
+          sourceWallet: {
+            tokenId: 1,
+          },
+          destinationWallet: {
+            address: '0xsdfljhadf65asd4f654ac6sd5v16a5sd4vc1',
+          },
+          createdAt: 1548763864757,
+          statusId: 4,
+          txHash: '0xsdfljhadf65asd4f654ac6sd5v16a5sd4vc1',
+        },
+        {
+          tokenId: 1,
+          amount: 5,
+          sourceWallet: {
+            tokenId: 1,
+          },
+          destinationWallet: {
+            address: '0xsdfljhadf65asd4f654ac6sd5v16a5sd4vc1',
+          },
+          createdAt: 1548763864757,
+          statusId: 5,
+          txHash: '0xsdfljhadf65asd4f654ac6sd5v16a5sd4vc1',
+        },
+        {
+          tokenId: 1,
+          amount: 5,
+          sourceWallet: {
+            tokenId: 1,
+          },
+          destinationWallet: {
+            address: '0xsdfljhadf65asd4f654ac6sd5v16a5sd4vc1',
+          },
+          createdAt: 1548763864757,
+          statusId: 2,
+          txHash: '0xsdfljhadf65asd4f654ac6sd5v16a5sd4vc1',
+        },
+        {
+          tokenId: 1,
+          amount: 5,
+          sourceWallet: {
+            tokenId: 1,
+          },
+          destinationWallet: {
+            address: '0xsdfljhadf65asd4f654ac6sd5v16a5sd4vc1',
+          },
+          createdAt: 1548763864757,
+          statusId: 2,
+          txHash: '0xsdfljhadf65asd4f654ac6sd5v16a5sd4vc1',
+        },
+        {
+          tokenId: 1,
+          amount: 5,
+          sourceWallet: {
+            tokenId: 1,
+          },
+          destinationWallet: {
+            address: '0xsdfljhadf65asd4f654ac6sd5v16a5sd4vc1',
+          },
+          createdAt: 1548763864757,
+          statusId: 2,
+          txHash: '0xsdfljhadf65asd4f654ac6sd5v16a5sd4vc1',
+        },
+        {
+          tokenId: 1,
+          amount: 5,
+          sourceWallet: {
+            tokenId: 1,
+          },
+          destinationWallet: {
+            address: '0xsdfljhadf65asd4f654ac6sd5v16a5sd4vc1',
+          },
+          createdAt: 1548763864757,
+          statusId: 2,
+          txHash: '0xsdfljhadf65asd4f654ac6sd5v16a5sd4vc1',
+        },
+        {
+          tokenId: 1,
+          amount: 5,
+          sourceWallet: {
+            tokenId: 1,
+          },
+          destinationWallet: {
+            address: '0xsdfljhadf65asd4f654ac6sd5v16a5sd4vc1',
+          },
+          createdAt: 1548763864757,
+          statusId: 2,
+          txHash: '0xsdfljhadf65asd4f654ac6sd5v16a5sd4vc1',
+        },
+        {
+          tokenId: 1,
+          amount: 5,
+          sourceWallet: {
+            tokenId: 1,
+          },
+          destinationWallet: {
+            address: '0xsdfljhadf65asd4f654ac6sd5v16a5sd4vc1',
+          },
+          createdAt: 1548763864757,
+          statusId: 2,
+          txHash: '0xsdfljhadf65asd4f654ac6sd5v16a5sd4vc1',
+        }
+      ],
+    },
+    tradeHistory: [
+      {
+        pair: "INVO/USDT",
+        type: "buy",
+        price: 0.41,
+        filledAmount: 56,
+        fee: 0.056,
+        total: 55.944,
+        timestamp: 1544851583393,
+      },
+    ],
+    orderHistory: [
+      {
+        id: 1,
+        pairId: 1,
+        price: 0.4,
+        amount: 140,
+        type: "limit",
+        side: "buy",
+        filledAmount: 140,
+        status: "pending",
+      },
+    ],
+    openOrders: [
+      {
+        id: 1,
+        pairId: 1,
+        price: 0.4,
+        amount: 140,
+        filledAmount: 140,
+        type: "limit",
+        side: "buy",
+        status: "pending",
+      },
+      {
+        id: 2,
+        pairId: 1,
+        price: 0.4,
+        amount: 140,
+        filledAmount: 140,
+        type: "limit",
+        side: "sell",
+        status: "pending",
+      },
+    ],
+
+    feeDiscountFactor: 0.1,
+    withdrawalLimit24: 100,
+    favouritePairs: [],
+    favouriteCharts: [],
+  },
+  tokens: [
+    {
+      id: 1,
+      typeId: 1,
+      name: 'invo',
+      symbol: 'INVO',
+      logoUrl: 'https://en.bitcoin.it/w/images/en/2/29/BC_Logo_.png',
+      decimalPrecision: 5,
+      minimumTradeAmount: 100,
+      minimumWithdrawalAmount: 0.01,
+      withdrawalFee: 0.2,
+      tokenCap: 100000,
+      marketCap: 100000,
+      tradeFeeThresholds: [
+        10000,
+        50000,
+        100000,
+        250000,
+        500000,
+        1000000,
+        5000000,
+        10000000,
+      ],
+      tradeFees: [
+        { taker: 0.26, maker: 0.16
+        },
+        { taker: 0.24, maker: 0.14
+        },
+        { taker: 0.22, maker: 0.12
+        },
+        { taker: 0.2, maker: 0.1
+        },
+        { taker: 0.18, maker: 0.08
+        },
+        { taker: 0.16, maker: 0.06
+        },
+        { taker: 0.14, maker: 0.04
+        },
+        { taker: 0.12, maker: 0.02
+        },
+        { taker: 0.1, maker: 0
+        },
+      ],
+      contractAddress: '',
+    },
+    {
+      id: 2,
+      typeId: 1,
+      name: 'usdt',
+      symbol: 'USDT',
+      logoUrl: 'https://en.bitcoin.it/w/images/en/2/29/BC_Logo_.png',
+      decimalPrecision: 6,
+      minimumTradeAmount: 0.01,
+      minimumWithdrawalAmount: 0.01,
+      withdrawalFee: 0.2,
+      tokenCap: 100000,
+      marketCap: 100000,
+      tradeFeeThresholds: [
+        10000,
+        50000,
+        100000,
+        250000,
+        500000,
+        1000000,
+        5000000,
+        10000000,
+      ],
+      tradeFees: [
+        { taker: 0.26, maker: 0.16
+        },
+        { taker: 0.24, maker: 0.14
+        },
+        { taker: 0.22, maker: 0.12
+        },
+        { taker: 0.2, maker: 0.1
+        },
+        { taker: 0.18, maker: 0.08
+        },
+        { taker: 0.16, maker: 0.06
+        },
+        { taker: 0.14, maker: 0.04
+        },
+        { taker: 0.12, maker: 0.02
+        },
+        { taker: 0.1, maker: 0
+        },
+      ],
+      contractAddress: '',
+    },
+    {
+      id: 3,
+      typeId: 1,
+      name: 'eth',
+      symbol: 'ETH',
+      logoUrl: 'https://en.bitcoin.it/w/images/en/2/29/BC_Logo_.png',
+      decimalPrecision: 6,
+      minimumTradeAmount: 0.01,
+      minimumWithdrawalAmount: 0.01,
+      withdrawalFee: 0.2,
+      tokenCap: 100000,
+      marketCap: 100000,
+      tradeFeeThresholds: [
+        10000,
+        50000,
+        100000,
+        250000,
+        500000,
+        1000000,
+        5000000,
+        10000000,
+      ],
+      tradeFees: [
+        { taker: 0.26, maker: 0.16
+        },
+        { taker: 0.24, maker: 0.14
+        },
+        { taker: 0.22, maker: 0.12
+        },
+        { taker: 0.2, maker: 0.1
+        },
+        { taker: 0.18, maker: 0.08
+        },
+        { taker: 0.16, maker: 0.06
+        },
+        { taker: 0.14, maker: 0.04
+        },
+        { taker: 0.12, maker: 0.02
+        },
+        { taker: 0.1, maker: 0
+        },
+      ],
+      contractAddress: '',
+    },
+  ],
+  pairs: [
+    {
+      id: 1,
+      baseTokenId: 1,
+      quoteTokenId: 2,
+      name: "INVO/USDT",
+      lastPrice: 0.00012,
+      lastUSDPrice: 0.04,
+      change24Price: 0.00001,
+      change24Percentage: 1.56,
+      high24: 0.000123,
+      low24: 0.000111,
+      vol24: 1567.21,
+      marketStatus: "running",
+      chartPriceHistory: [
+        25,
+        15,
+        75,
+        20,
+        15,
+        60,
+        50
+      ],
+    },
+    {
+      id: 2,
+      baseTokenId: 3,
+      quoteTokenId: 2,
+      name: 'ETH/USDT',
+      lastPrice: 0.0032,
+      lastUSDPrice: 100,
+      change24Price: 2,
+      change24Percentage: 3.16,
+      high24: 110,
+      low24: 95,
+      vol24: 33567.21,
+      marketStatus: 'running',
+      chartPriceHistory: [
+        10,
+        30,
+        45,
+        40,
+        25,
+        70,
+        60
+      ],
+    },
+    {
+      id: 3,
+      baseTokenId: 2,
+      quoteTokenId: 3,
+      name: 'USDT/ETH',
+      lastPrice: 0.0032,
+      lastUSDPrice: 100,
+      change24Price: 2,
+      change24Percentage: 3.16,
+      high24: 110,
+      low24: 95,
+      vol24: 33567.21,
+      marketStatus: 'running',
+      chartPriceHistory: [
+        45,
+        50,
+        65,
+        25,
+        35,
+        40,
+        50
+      ],
+    },
+    {
+      id: 4,
+      baseTokenId: 2,
+      quoteTokenId: 1,
+      name: "USDT/INVO",
+      lastPrice: 0.00012,
+      lastUSDPrice: 0.04,
+      change24Price: 0.00001,
+      change24Percentage: 1.56,
+      high24: 0.000123,
+      low24: 0.000111,
+      vol24: 1567.21,
+      marketStatus: "running",
+      chartPriceHistory: [
+        35,
+        25,
+        35,
+        40,
+        45,
+        50,
+        50
+      ],
+    },
+  ],
+  filteredPairs: [],
+  selectedPairId: 1,
+  selectedTokenId: 1,
+  lastOrders: [
+    {
+      pairId: 1,
+      price: 0.000012,
+      amount: 120,
+      sideId: 1,
+    },
+    {
+      pairId: 1,
+      price: 0.000012,
+      amount: 120,
+      sideId: 2,
+    },
+    {
+      pairId: 1,
+      price: 0.000012,
+      amount: 120,
+      sideId: 2,
+    },
+    {
+      pairId: 1,
+      price: 0.000012,
+      amount: 120,
+      sideId: 1,
+    },
+    {
+      pairId: 1,
+      price: 0.000012,
+      amount: 120,
+      sideId: 2,
+    },
+    {
+      pairId: 1,
+      price: 0.000013,
+      amount: 1330,
+      sideId: 2,
+    },
+        {
+      pairId: 1,
+      price: 0.000012,
+      amount: 120,
+      sideId: 1,
+    },
+    {
+      pairId: 1,
+      price: 0.000013,
+      amount: 1330,
+      sideId: 1,
+    },
+        {
+      pairId: 1,
+      price: 0.000012,
+      amount: 120,
+      sideId: 1,
+    },
+    {
+      pairId: 1,
+      price: 0.000013,
+      amount: 1330,
+      sideId: 1,
+    },
+  ],
+  lastTrades: [],
+  tourSteps: {
+    dashboard: [
+      {
+        selector: '[data-tut="trade"]',
+        content: 'You can buy or sell tokens here.',
+      },
+      {
+        selector: '[data-tut="tradingView"]',
+        content: 'Price history of selected token.',
+      },
+      {
+        selector: '[data-tut="pairList"]',
+        content: 'List of tokens with more details. You can select them to do buy or sell.',
+      },
+    ],
+    tradingPlatform: [
+      {
+        selector: '[data-tut="userInfo"]',
+        content: 'Here, you can see status of your orders and history of trades and status of wallets.',
+      },
+      {
+        selector: '[data-tut="orderBook"]',
+        content: 'open orders of market',
+      },
+      {
+        selector: '[data-tut="pairList"]',
+        content: 'List of tokens for buy or sell. you can select them and do buy or sell.',
+      },
+      {
+        selector: '[data-tut="tradingView"]',
+        content: 'stock charts',
+      },
+      {
+        selector: '[data-tut="trade"]',
+        content: 'You can place order here.',
+      },
+    ],
+    deposit: [
+      {
+        selector: '[data-tut="walletList"]',
+        content: 'List of Wallets',
+      },
+      {
+        selector: '[data-tut="walletInfo"]',
+        content: 'selected wallet information.',
+      },
+      {
+        selector: '[data-tut="depositHistory"]',
+        content: 'history of your deposits on all wallets',
+      },
+    ],
+    withdraw: [
+      {
+        selector: '[data-tut="walletList"]',
+        content: 'list of wallets.',
+      },
+      {
+        selector: '[data-tut="walletInfo"]',
+        content: 'selected wallet information.',
+      },
+      {
+        selector: '[data-tut="withdrawHistory"]',
+        content: 'withdraw history information',
+      },
+    ],
+    settings: [
+      {
+        selector: '[data-tut="changeProfilePic"]',
+        content: 'Here, you can change profile picture.',
+      },
+      {
+        selector: '[data-tut="changePassword"]',
+        content: 'you can reset your password by this component',
+      },
+      {
+        selector: '[data-tut="changeTimeZone"]',
+        content: 'you can change default timezone of whole project here.',
+      },
+      {
+        selector: '[data-tut="changeCurrency"]',
+        content: 'you can select your default currency to convert prices.',
+      },
+      {
+        selector: '[data-tut="verifyYourIdentity"]',
+        content: 'For working completely with our platform we need to verify your identity you can do this here.',
+      },
+    ],
+  },
+  depthChartData: [],
+  showChangePasswordModal: false,
+  showAddPaymentModal: false,
+  showUploadProfilePicModal: false,
+  showVerifyIdentityModal: false,
+  showSMSAuthenticationModal: false,
+  showGoogleAuthenticationModal: false,
+  showInviteFriendsModal: false,
+  showGetMoreInvoModal: false,
+  tradingPlatformGridIsLocked: false,
+  profilePicUploadProgress: 0,
+  isUploadingProfilePic: false,
+  currentRoute: '/',
+  tvChartIsReady: false,
+  isLoggedIn: false,
+  tokenInfo: {},
+  tokenSentimentInfo: {},
+  showTour: true,
+  showDisclaimer: true,
+  isSubmittingVerifyAccountInfo: false,
+  withdrawing: false,
+  initialTokenIdForBuy: null,
+  tradingPlatformLayout:  {
+    lg: [
+      { i: 'pairList', x: 0, y: 0, w: 12, h: 9, minW: 8, minH: 4 },
+      { i: 'tradingView', x: 12, y: 0, w: 24, h: 9, minW: 6 },
+      { i: 'orderbook', x: 36, y: 0, w: 12, h: 9, minW: 4, minH: 4 },
+      { i: 'userInfo', x: 0, y: 9, w: 32, h: 10, minW: 8, minH: 4 },
+      { i: 'trade', x: 32, y: 9, w: 16, h: 10, minW: 3, minH: 2 },
+    ],
+    md: [
+      { i: 'pairList', x: 0, y: 0, w: 12, h: 6, minW: 12, minH: 4 },
+      { i: 'tradingView', x: 12, y: 0, w: 20, h: 6, minW: 8 },
+      { i: 'orderbook', x: 32, y: 0, w: 8, h: 6, minW: 8, minH: 4 },
+      { i: 'userInfo', x: 0, y: 6, w: 20, h: 10, minW: 16, minH: 4 },
+      { i: 'trade', x: 20, y: 6, w: 20, h: 10, minW: 16, minH: 9, maxH: 10 },
+    ],
+    sm: [
+      { i: 'pairList', x: 0, y: 6, w: 12, h: 6, minW: 12, minH: 4 },
+      { i: 'tradingView', x: 0, y: 0, w: 24, h: 6, minW: 8 },
+      { i: 'orderbook', x: 12, y: 6, w: 12, h: 6, minW: 12, minH: 4 },
+      { i: 'userInfo', x: 0, y: 12, w: 24, h: 6, minW: 16, minH: 4 },
+      { i: 'trade', x: 0, y: 24, w: 24, h: 10, minW: 12, minH: 9, maxH: 10 },
+    ],
+    xs: [
+      { i: 'pairList', x: 0, y: 0, w: 16, h: 6, minW: 12, minH: 4 },
+      { i: 'tradingView', x: 0, y: 6, w: 16, h: 6, minW: 8 },
+      { i: 'orderbook', x: 0, y: 12, w: 16, h: 6, minW: 12, minH: 4 },
+      { i: 'userInfo', x: 0, y: 18, w: 16, h: 6, minW: 16, minH: 4 },
+      { i: 'trade', x: 0, y: 24, w: 16, h: 10, minW: 12, minH: 9, maxH: 10 },
+    ],
+  },
+}

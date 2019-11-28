@@ -1,0 +1,6 @@
+{
+  "name": "ColumnHeader",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./ColumnHeader.js"
+}

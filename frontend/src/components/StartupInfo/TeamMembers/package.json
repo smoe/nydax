@@ -1,0 +1,6 @@
+{
+  "name": "TeamMembers",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./TeamMembers.js"
+}

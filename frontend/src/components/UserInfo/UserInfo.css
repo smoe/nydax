@@ -1,0 +1,26 @@
+@import '../variables.css';
+
+.customPanel {
+  margin-bottom: 10px !important;
+  border-radius: 2px;
+  box-shadow: 0 2px 9px 1px rgba(0, 0, 0, 0.2);
+
+  .panel-body {
+    padding: 0;
+  }
+
+  &.light {
+    background-color: var(--background-light);
+    border: var(--border-light);
+  }
+
+  &.dark {
+    background-color: var(--background-dark);
+    border: var(--border-dark);
+  }
+
+  &.darkCmc {
+    background-color: var(--background-darkCmc);
+    border: var(--border-darkCmc);
+  }
+}

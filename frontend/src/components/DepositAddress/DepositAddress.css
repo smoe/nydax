@@ -1,0 +1,199 @@
+@import '../variables.css';
+
+/* .depositAddress {
+  width: 95%;
+  display: flex;
+  align-items: center;
+  height: 100px;
+  padding: 0;
+  padding-left: 2rem;
+  flex-wrap: wrap;
+  border: 1px solid;
+  border-right: 0;
+  border-radius: 4px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+
+  .tokenIcon {
+    margin-right: 20px;
+  }
+
+  > div {
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .value {
+    word-break: break-all;
+    word-spacing: normal;
+    font-size: 1.1vw;
+  }
+}
+
+.depositAddressLabel {
+  color: var(--sub-title-color);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.depositAddressQrCode {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 15%;
+  margin: auto;
+}
+
+.copyAddress {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  width: 40px;
+  height: 100px;
+  flex-shrink: 1;
+  border: 1px solid;
+  border-radius: 4px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  cursor: pointer;
+} */
+
+.customInput {
+  label {
+    color: #363a4c;
+  }
+
+  input {
+    border-color: #ced3e3 !important;
+    color: #363a4c !important;
+    background-color: white !important;
+    border: 1px solid;
+    border-radius: 2px !important;
+    height: 45px;
+  }
+}
+
+.description {
+  color: var(--sub-title-color);
+  text-align: left;
+}
+
+.copyButton {
+  background: transparent;
+  color: #fff;
+
+  /* border-left: none; */
+  height: 45px;
+}
+
+.root {
+  /* display: flex;
+  margin-top: 15px; */
+
+  &.light {
+    /* .depositAddress {
+      border-color: var(--border-light);
+
+      .value {
+        color: var(--text-light);
+      }
+    } */
+
+    .copyAddress {
+      border-color: var(--border-light);
+      color: var(--text-light);
+      background: var(--background-light);
+    }
+
+    .customInput input {
+      border-color: var(--border-light) !important;
+      color: var(--text-light) !important;
+      background-color: var(--background-light) !important;
+    }
+
+    .copyButton {
+      color: var(--text-light);
+      background: var(--background-light);
+      border-color: var(--border-light);
+    }
+  }
+
+  &.dark {
+    /* .depositAddress {
+      border-color: var(--border-dark);
+
+      .value {
+        color: var(--text-dark);
+      }
+    } */
+
+    .copyAddress {
+      border-color: var(--border-dark);
+      color: var(--text-dark);
+      background: var(--background-dark);
+    }
+
+    .customInput input {
+      border-color: var(--border-dark) !important;
+      color: var(--text-dark) !important;
+      background-color: var(--background-dark) !important;
+    }
+
+    .copyButton {
+      color: var(--text-dark);
+      background: var(--background-dark);
+      border-color: var(--border-dark);
+    }
+  }
+
+  &.darkCmc {
+    /* .depositAddress {
+      border-color: var(--border-dark);
+
+      .value {
+        color: var(--text-dark);
+      }
+    } */
+
+    .copyAddress {
+      border-color: var(--border-darkCmc);
+      color: var(--text-darkCmc);
+      background: var(--background-darkCmc);
+    }
+
+    .customInput input {
+      border-color: var(--border-darkCmc) !important;
+      color: var(--text-darkCmc) !important;
+      background-color: var(--background-darkCmc) !important;
+    }
+
+    .copyButton {
+      color: var(--text-darkCmc);
+      background: var(--background-darkCmc);
+      border-color: var(--border-darkCmc);
+    }
+  }
+}
+
+/* @media (--sm-viewport) {
+  .depositAddressQrCode {
+    width: auto;
+  }
+
+  .depositAddress {
+    justify-content: center;
+  }
+} */
+
+@media (--xs-viewport) {
+  .root {
+    canvas {
+      max-width: 80px;
+      max-height: 80px;
+    }
+  }
+}

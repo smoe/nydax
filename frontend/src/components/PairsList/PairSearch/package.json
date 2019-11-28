@@ -1,0 +1,6 @@
+{
+  "name": "PairSearch",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./PairSearch.js"
+}

@@ -1,0 +1,188 @@
+@import '../variables.css';
+
+.walletBalance {
+  /* background-color: #1c2237; */
+  padding: 10px;
+  display: inline;
+  border-radius: 4px;
+  color: #fff;
+}
+
+.listOfTokens {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  thead {
+    display: block;
+    width: 100%;
+
+    /* border-bottom: 1px solid; */
+
+    tr {
+      display: flex;
+      width: 100%;
+    }
+
+    th {
+      flex: 1;
+      padding: 1rem;
+      color: var(--sub-title-color);
+      display: inline-block;
+      width: 50%;
+    }
+  }
+
+  tbody {
+    display: block;
+    overflow-y: auto;
+
+    tr {
+      cursor: pointer;
+      display: flex;
+
+      /* width: 100%; */
+      width: 95%;
+      margin-left: 15px;
+
+      /* &:hover {
+        background-color: #97a1c0;
+      } */
+
+      &.selected {
+        background-color: #1c2237;
+        border-radius: 4px;
+      }
+    }
+
+    td {
+      padding: 1em;
+      width: 50%;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      .tokenNameAndLogo {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        img {
+          margin-right: 15px;
+        }
+      }
+    }
+
+    .tickIcon {
+      position: absolute;
+      height: 18px;
+      width: 18px;
+    }
+
+    &::-webkit-scrollbar {
+      width: 4px;
+      height: 4px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: rgba(0, 0, 0, 0.2);
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background: rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  &.light {
+    tbody tr.selected {
+      background-color: lightgray !important;
+      border-radius: 4px;
+    }
+
+    tbody tr td span {
+      color: var(--text-light);
+    }
+
+    tbody {
+      &::-webkit-scrollbar-thumb {
+        background: var(--scroll-light);
+      }
+
+      &::-webkit-scrollbar-thumb:hover {
+        background: var(--scroll-light);
+      }
+    }
+
+    .walletBalance {
+      color: var(--text-light);
+    }
+
+    thead {
+      border-bottom: 2px solid var(--border-light);
+    }
+  }
+
+  &.dark {
+    tbody tr.selected {
+      background-color: #1c2237 !important;
+      border-radius: 4px;
+    }
+
+    tbody tr td span {
+      color: var(--text-dark);
+    }
+
+    tbody {
+      &::-webkit-scrollbar-thumb {
+        background: var(--scroll-dark);
+      }
+
+      &::-webkit-scrollbar-thumb:hover {
+        background: var(--scroll-dark);
+      }
+    }
+
+    .walletBalance {
+      color: var(--text-dark);
+    }
+
+    thead {
+      border-bottom: 2px solid var(--border-dark);
+    }
+  }
+
+  &.darkCmc {
+    tbody tr.selected {
+      background-color: #3a3636 !important;
+      border-radius: 4px;
+    }
+
+    tbody tr td span {
+      color: var(--text-darkCmc);
+    }
+
+    tbody {
+      &::-webkit-scrollbar-thumb {
+        background: var(--scroll-darkCmc);
+      }
+
+      &::-webkit-scrollbar-thumb:hover {
+        background: var(--scroll-darkCmc);
+      }
+    }
+
+    .walletBalance {
+      color: var(--text-darkCmc);
+    }
+
+    thead {
+      border-bottom: 2px solid var(--border-darkCmc);
+    }
+  }
+}

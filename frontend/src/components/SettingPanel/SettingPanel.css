@@ -1,0 +1,130 @@
+@import '../variables.css';
+
+.root {
+  display: flex;
+  align-items: center;
+  height: 150px;
+  padding: 0 4%;
+  margin: 2% 0;
+
+  .imageContainer {
+    width: 30%;
+    display: inline-block;
+
+    img {
+      padding: 10%;
+      height: 150px;
+      width: 150px;
+
+      /* height: auto; */
+    }
+  }
+
+  .descriptionContainer {
+    width: 40%;
+    display: inline-block;
+
+    /* padding-top: 5%; */
+    h5 {
+      font-weight: bold;
+    }
+  }
+
+  .buttonContainer {
+    width: 30%;
+
+    .button {
+      margin-left: 10%;
+      width: 90%;
+      height: 40px;
+      background-color: transparent;
+      background-repeat: no-repeat;
+      border-width: 1px;
+      border-style: solid;
+      border-radius: 3px;
+
+      /* @mixin theme border-color border; */
+
+      /* border-color: white; */
+
+      /* border: none; */
+      cursor: pointer;
+
+      /* overflow: hidden;
+        outline:none; */
+    }
+  }
+
+  &.light {
+    border-color: var(--border-light);
+
+    .descriptionContainer {
+      color: var(--text-light);
+    }
+
+    .buttonContainer {
+      .button {
+        color: var(--text-light);
+        border-color: var(--border-light);
+      }
+    }
+  }
+
+  &.dark {
+    border-color: var(--border-dark);
+
+    .descriptionContainer {
+      color: var(--text-dark);
+    }
+
+    .buttonContainer {
+      .button {
+        color: var(--text-dark);
+        border-color: var(--border-dark);
+      }
+    }
+  }
+
+  &.darkCmc {
+    border-color: var(--border-darkCmc);
+
+    .descriptionContainer {
+      color: var(--text-darkCmc);
+    }
+
+    .buttonContainer {
+      .button {
+        color: var(--text-darkCmc);
+        border-color: var(--border-darkCmc);
+      }
+    }
+  }
+}
+
+@media (--sm-viewport) {
+  .root {
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    text-align: center;
+    border: 1px solid;
+    border-radius: 4px;
+    padding: 10px;
+
+    .imageContainer {
+      width: auto;
+    }
+
+    .descriptionContainer {
+      width: auto;
+    }
+
+    .buttonContainer {
+      width: 100%;
+
+      .button {
+        margin: 0;
+      }
+    }
+  }
+}

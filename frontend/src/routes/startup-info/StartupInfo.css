@@ -1,0 +1,68 @@
+@import '../../components/variables.css';
+
+.colContainer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.tokenSummaryCardCol {
+  width: 35%;
+  padding: 10px;
+}
+
+.playerCol {
+  width: 65%;
+  padding: 10px 10px 10px 0;
+  height: 400px;
+}
+
+.aboutUsCol {
+  width: 65%;
+  padding: 0 10px 10px 10px;
+}
+
+.teamMemberCol {
+  width: 35%;
+  padding: 0 10px 10px 0;
+}
+
+@media (--md-viewport) {
+  .tokenSummaryCardCol {
+    width: 40%;
+  }
+
+  .playerCol {
+    width: 60%;
+  }
+
+  .aboutUsCol {
+    width: 50%;
+  }
+
+  .teamMemberCol {
+    width: 50%;
+  }
+}
+
+@media (--sm-viewport) {
+  .tokenSummaryCardCol {
+    width: 100%;
+  }
+
+  .playerCol {
+    width: 100%;
+    padding: 10px;
+    height: 400px;
+  }
+
+  .aboutUsCol {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .teamMemberCol {
+    width: 100%;
+    padding: 10px;
+  }
+}

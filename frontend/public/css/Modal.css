@@ -1,0 +1,41 @@
+.customModal .modal-content {
+  border-radius: 2px !important;
+}
+
+.customModal .modal-header {
+  border-bottom: 0 !important;
+}
+
+/* invite friends modal */
+
+.inivteFriendsModal .modal-content {
+  background: #eaf2fc;
+  border-radius: 10px !important;
+}
+
+.inivteFriendsModal .modal-header {
+  border-bottom: 0 !important;
+}
+
+.inivteFriendsModal .customCloseButton {
+  height: 30px;
+  width: 30px;
+  padding: 5px;
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 1;
+  color: white;
+  background: rgb(44, 50, 138);
+  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-shadow: 0 1px 0 #fff;
+  z-index: 5;
+}
+
+/* end invite frinds */

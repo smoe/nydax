@@ -1,0 +1,102 @@
+@import '../variables.css';
+
+.infoRow {
+  color: white;
+  margin: 0;
+}
+
+.infoCol {
+  color: white;
+  padding: 10px;
+}
+
+.description {
+  color: white;
+  margin: 0;
+  padding: 10px;
+  padding-top: 0;
+  word-break: break-word;
+}
+
+.headLine {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 5px;
+  color: white;
+}
+
+.root {
+  height: inherit;
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  &.light {
+    .headLine {
+      color: var(--number-light);
+    }
+
+    .description {
+      color: var(--number-light);
+    }
+
+    .infoCol {
+      color: var(--number-light);
+    }
+
+    .infoRow {
+      color: var(--number-light);
+    }
+  }
+
+  &.dark {
+    .headLine {
+      color: var(--number-dark);
+    }
+
+    .description {
+      color: var(--number-dark);
+    }
+
+    .infoCol {
+      color: var(--number-dark);
+    }
+
+    .infoRow {
+      color: var(--number-dark);
+    }
+  }
+
+  &.darkCmc {
+    .headLine {
+      color: var(--number-darkCmc);
+    }
+
+    .description {
+      color: var(--number-darkCmc);
+    }
+
+    .infoCol {
+      color: var(--number-darkCmc);
+    }
+
+    .infoRow {
+      color: var(--number-darkCmc);
+    }
+  }
+}

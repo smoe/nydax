@@ -1,0 +1,6 @@
+{
+  "name": "ChoosePaymentMethod",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./ChoosePaymentMethod.js"
+}

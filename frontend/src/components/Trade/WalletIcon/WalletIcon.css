@@ -1,0 +1,21 @@
+@import '../../variables.css';
+
+.walletIcon {
+  height: 18px;
+  width: 18px;
+
+  &.light {
+    fill: var(--text-light);
+    stroke: var(--text-light);
+  }
+
+  &.dark {
+    fill: var(--text-dark);
+    stroke: var(--text-dark);
+  }
+
+  &.darkCmc {
+    fill: var(--text-darkCmc);
+    stroke: var(--text-darkCmc);
+  }
+}

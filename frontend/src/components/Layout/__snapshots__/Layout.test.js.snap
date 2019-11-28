@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Layout renders children correctly 1`] = `
+<div>
+  <div>
+    <div
+      role="navigation"
+    />
+  </div>
+  <div
+    className="child"
+  />
+</div>
+`;

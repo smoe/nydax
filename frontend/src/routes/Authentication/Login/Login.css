@@ -1,0 +1,304 @@
+@import '../../../components/variables.css';
+
+.loginHeader {
+  text-align: center;
+  min-height: 20vh;
+
+  img {
+    margin: 40px 0;
+    max-width: 200px;
+  }
+}
+
+.antiPhisingMessage {
+  color: white;
+}
+
+.antiPhishingCheck {
+  text-align: left;
+}
+
+.customBtn {
+  border-radius: 2px !important;
+  color: white !important;
+  border: 0 !important;
+  height: 40px;
+  background-color: #7577ff !important;
+  width: 71%;
+
+  /* margin-bottom: 20px; */
+}
+
+.loginContainer {
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 70vh;
+
+  .loginTitle {
+    font-size: 28px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    padding-top: 4rem;
+  }
+
+  .regForm {
+    padding: 3rem 1.5rem 2rem 1.5rem;
+
+    .forgetPassword {
+      font-size: 14px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.43;
+      letter-spacing: normal;
+      text-align: center;
+      cursor: pointer;
+    }
+  }
+
+  .loginBtn {
+    height: 40px;
+    width: 100%;
+    background-color: #7577ff;
+    border-color: #7577ff;
+    border-radius: 2px;
+    opacity: 0.75;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.71;
+    text-align: center;
+    color: #fff;
+    border-width: 1px;
+    border-style: solid;
+    margin-bottom: 10px;
+
+    .loginBtn.active.focus,
+    .loginBtn.active:focus,
+    .loginBtn.focus,
+    .loginBtn:active.focus,
+    .loginBtn:focus,
+    .loginBtn:active:focus {
+      outline: 0;
+      outline-offset: -2px;
+    }
+  }
+
+  .twoFA {
+    .description {
+      color: var(--sub-title-color);
+      text-align: center;
+
+      &.right {
+        text-align: right !important;
+      }
+
+      &.left {
+        text-align: left !important;
+      }
+    }
+
+    .enterToken {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+.loginFooter {
+  text-align: center;
+  width: 100%;
+  padding: 10px 0 2rem 0;
+  font-size: 15px;
+
+  .signUp {
+    cursor: pointer;
+    font-weight: bold;
+    padding-left: 10px;
+  }
+}
+
+.customInput {
+  input {
+    border: 1px solid;
+    border-radius: 2px !important;
+    height: 40px;
+  }
+}
+
+.loginMain {
+  display: flex;
+  flex-direction: column;
+
+  /* justify-content: space-between; */
+  min-height: 100vh;
+
+  &.light {
+    .description {
+      color: var(--text-light);
+    }
+
+    .antiPhisingMessage {
+      color: var(--text-light);
+    }
+
+    .loginContainer {
+      .loginTitle {
+        color: var(--text-light);
+      }
+
+      .regForm {
+        .inputIcon {
+          border-color: var(--border-light);
+          color: var(--text-light);
+          background-color: var(--background-light);
+        }
+
+        span {
+          color: var(--text-light);
+        }
+      }
+    }
+
+    .loginFooter {
+      color: var(--text-light);
+    }
+
+    .customInput input {
+      border-color: var(--border-light);
+      color: var(--text-light);
+      background-color: var(--background-light);
+    }
+
+    input:-webkit-autofill {
+      -webkit-text-fill-color: var(--text-light) !important;
+    }
+
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active {
+      transition: background-color 5000s ease-in-out 0s;
+    }
+  }
+
+  &.dark {
+    .description {
+      color: var(--text-dark);
+    }
+
+    .antiPhisingMessage {
+      color: var(--text-dark);
+    }
+
+    .loginContainer {
+      .loginTitle {
+        color: var(--text-dark);
+      }
+
+      .regForm {
+        .inputIcon {
+          border-color: var(--border-dark);
+          color: var(--text-dark);
+          background-color: var(--background-dark);
+        }
+
+        span {
+          color: var(--text-dark);
+        }
+      }
+    }
+
+    .loginFooter {
+      color: var(--text-dark);
+    }
+
+    .customInput input {
+      border-color: var(--border-dark);
+      color: var(--text-dark);
+      background-color: var(--background-dark);
+    }
+
+    input:-webkit-autofill {
+      -webkit-text-fill-color: var(--text-dark) !important;
+    }
+
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active {
+      transition: background-color 5000s ease-in-out 0s;
+    }
+  }
+
+  &.darkCmc {
+    .description {
+      color: var(--text-darkCmc);
+    }
+
+    .antiPhisingMessage {
+      color: var(--text-darkCmc);
+    }
+
+    .loginContainer {
+      .loginTitle {
+        color: var(--text-darkCmc);
+      }
+
+      .regForm {
+        .inputIcon {
+          border-color: var(--border-darkCmc);
+          color: var(--text-darkCmc);
+          background-color: var(--background-darkCmc);
+        }
+
+        span {
+          color: var(--text-darkCmc);
+        }
+      }
+    }
+
+    .loginFooter {
+      color: var(--text-darkCmc);
+    }
+
+    .customInput input {
+      border-color: var(--border-darkCmc);
+      color: var(--text-darkCmc);
+      background-color: var(--background-darkCmc);
+    }
+
+    input:-webkit-autofill {
+      -webkit-text-fill-color: var(--text-darkCmc) !important;
+    }
+
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active {
+      transition: background-color 5000s ease-in-out 0s;
+    }
+  }
+}
+
+@media (--sm-viewport) {
+  .loginContainer {
+    width: 95% !important;
+
+    .loginTitle {
+      font-size: 18px;
+      font-weight: bold;
+    }
+  }
+
+  .loginHeader {
+    img {
+      width: 50%;
+    }
+  }
+}

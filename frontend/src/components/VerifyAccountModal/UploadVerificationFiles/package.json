@@ -1,0 +1,6 @@
+{
+  "name": "UploadVerificationFiles",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./UploadVerificationFiles"
+}

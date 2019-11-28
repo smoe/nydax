@@ -1,0 +1,8 @@
+const constants = {
+  SELECT_ORDER: 'SELECT_ORDER',
+  SELECT_PAYMENT_METHOD: 'SELECT_PAYMENT_METHOD',
+  PAYMENT_FORM: 'PAYMENT_FORM',
+  RECEIPT: 'RECEIPT',
+};
+
+export default constants;

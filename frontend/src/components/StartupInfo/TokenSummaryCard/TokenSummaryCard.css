@@ -1,0 +1,112 @@
+@import '../../variables.css';
+
+.root {
+  .header {
+    display: flex;
+    align-items: center;
+    height: 150px;
+    width: 90%;
+    padding: 20px 0;
+    margin: auto;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+
+    img {
+      height: 100px;
+      width: auto;
+    }
+
+    .companyNameContainer {
+      margin-left: 10px;
+      width: 80%;
+
+      /* display: inline-block; */
+      .companyName {
+        font-size: 15px;
+        font-weight: bold;
+      }
+
+      .companyDescription {
+        font-size: 14px;
+        color: gray;
+      }
+    }
+
+    .price {
+      float: right;
+      direction: rtl;
+      width: 20%;
+    }
+  }
+
+  .body {
+    width: 90%;
+    padding: 20px 0;
+    margin: auto;
+
+    .statistics {
+      .statisticTitle {
+        width: 80%;
+        display: inline-block;
+        line-height: 30px;
+      }
+
+      .statistic {
+        float: right;
+        direction: rtl;
+        width: 20%;
+        font-weight: bold;
+      }
+    }
+
+    .watchVideo {
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      color: #7577ff;
+      font-size: 12px;
+    }
+  }
+
+  &.light {
+    background-color: var(--background-light);
+
+    .header {
+      border-bottom-color: var(--border-light);
+    }
+
+    .companyName,
+    .price,
+    .statistics {
+      color: var(--text-light);
+    }
+  }
+
+  &.dark {
+    background-color: var(--background-dark);
+
+    .header {
+      border-bottom-color: var(--border-dark);
+    }
+
+    .companyName,
+    .price,
+    .statistics {
+      color: var(--text-dark);
+    }
+  }
+
+  &.darkCmc {
+    background-color: var(--background-darkCmc);
+
+    .header {
+      border-bottom-color: var(--border-darkCmc);
+    }
+
+    .companyName,
+    .price,
+    .statistics {
+      color: var(--text-darkCmc);
+    }
+  }
+}

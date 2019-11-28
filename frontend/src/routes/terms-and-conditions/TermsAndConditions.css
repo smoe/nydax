@@ -1,0 +1,33 @@
+.root {
+  text-align: center;
+}
+
+.agreementConHeader {
+  font-weight: bold;
+  color: #000;
+  font-size: 16px;
+}
+
+.agreementCon {
+  padding: 5px;
+  text-align: left;
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.4);
+  }
+}

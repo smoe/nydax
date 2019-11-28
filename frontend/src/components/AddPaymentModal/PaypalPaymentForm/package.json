@@ -1,0 +1,6 @@
+{
+  "name": "PaypalPaymentForm",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./PaypalPaymentForm.js"
+}

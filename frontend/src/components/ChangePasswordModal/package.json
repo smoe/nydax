@@ -1,0 +1,6 @@
+{
+  "name": "ChangePasswordModal",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./ChangePasswordModal.js"
+}

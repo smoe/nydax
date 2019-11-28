@@ -1,0 +1,187 @@
+/* Theme the Tabulator element */
+.tabulatorTheme {
+  background-color: transparent;
+  border: 0;
+  margin-bottom: 0;
+}
+
+/* Theme the header */
+.tabulatorTheme .tabulator-header {
+  background-color: transparent;
+  border-bottom: 1px solid #585d70;
+  color: #fff;
+}
+
+.tabulatorTheme .tabulator-header .tabulator-col {
+  background: transparent;
+}
+
+.tabulatorTheme .tabulator-header .tabulator-col.tabulator-sortable:hover {
+  cursor: pointer;
+  background-color: transparent;
+}
+
+/* holder */
+.tabulatorTheme .tabulator-tableHolder::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+.tabulatorTheme .tabulator-tableHolder::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.tabulatorTheme .tabulator-tableHolder::-webkit-scrollbar-thumb {
+  background: rgba(121, 120, 120, 0.5);
+}
+
+.tabulatorTheme .tabulator-tableHolder::-webkit-scrollbar-thumb:hover {
+  background: rgba(121, 120, 120, 0.5);
+}
+
+/* Allow column header names to wrap lines */
+.tabulatorTheme .tabulator-header .tabulator-col,
+.tabulatorTheme .tabulator-header .tabulator-col-row-handle {
+  white-space: normal;
+}
+
+.tabulatorTheme .tabulator-header .tabulator-col .tabulator-col-content {
+  float: left !important;
+}
+
+/* Color the table rows */
+.tabulatorTheme .tabulator-tableHolder .tabulator-table {
+  background: transparent;
+}
+
+.tabulatorTheme .tabulator-tableHolder .tabulator-table .tabulator-row.tabulator-selectable:hover {
+  background-color: #475ba52e !important;
+}
+
+.tabulatorTheme .tabulator-tableHolder .tabulator-table .tabulator-row {
+  color: #fff;
+  background-color: transparent;
+  border-bottom: 1px solid #575c71;
+}
+
+/* Color even rows */
+.tabulatorTheme .tabulator-tableHolder .tabulator-table .tabulator-row:last-child {
+  background-color: transparent;
+  border-bottom: 0;
+}
+
+/* footer */
+.tabulatorTheme .tabulator-footer {
+  background-color: transparent;
+  border-top: 1px solid #585d70;
+}
+
+/* dark theme */
+.tabulatorTheme.dark .tabulator-header .tabulator-col .tabulator-header-filter input {
+  background: transparent;
+  color: white;
+  border: 1px solid #585d70;
+}
+
+.tabulatorTheme.dark .tabulator-header {
+  background-color: transparent;
+  border-bottom: 1px solid #585d70;
+
+  /* color: #a5bdea; */
+}
+
+.tabulatorTheme.dark .tabulator-footer {
+  border-top: 1px solid #585d70;
+
+  /* color: #a5bdea; */
+}
+
+.tabulatorTheme.dark .tabulator-tableHolder .tabulator-table .tabulator-row {
+  /* color: #a5bdea; */
+  background-color: transparent;
+  border-bottom: 1px solid #575c71;
+}
+
+/* .tabulatorTheme.dark .tabulator-page {
+  color: #a5bdea;
+} */
+
+.tabulatorTheme.dark .tabulator-page.active {
+  color: #fff;
+}
+
+.tabulatorTheme.dark .tabulator-tableHolder .tabulator-table .tabulator-row.tabulator-selectable:hover {
+  background-color: #475ba52e !important;
+}
+
+/* darkCmc theme */
+.tabulatorTheme.darkCmc .tabulator-header .tabulator-col .tabulator-header-filter input {
+  background: transparent;
+  color: white;
+  border: 1px solid #3b3b3b;
+}
+
+.tabulatorTheme.darkCmc .tabulator-header {
+  background-color: transparent;
+  border-bottom: 1px solid #3b3b3b;
+  color: #fff;
+}
+
+.tabulatorTheme.darkCmc .tabulator-footer {
+  border-top: 1px solid #3b3b3b;
+  color: #fff;
+}
+
+.tabulatorTheme.darkCmc .tabulator-tableHolder .tabulator-table .tabulator-row {
+  color: #fff;
+  background-color: transparent;
+  border-bottom: 1px solid #3b3b3b;
+}
+
+.tabulatorTheme.darkCmc .tabulator-page {
+  color: #fff;
+}
+
+.tabulatorTheme.darkCmc .tabulator-page.active {
+  color: #fff;
+}
+
+.tabulatorTheme.darkCmc .tabulator-tableHolder .tabulator-table .tabulator-row.tabulator-selectable:hover {
+  background-color: #475ba52e !important;
+}
+
+/* light theme */
+.tabulatorTheme.light .tabulator-header .tabulator-col .tabulator-header-filter input {
+  background: transparent;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+.tabulatorTheme.light .tabulator-header {
+  background-color: transparent;
+  border-bottom: 1px solid #ddd;
+  color: #333;
+}
+
+.tabulatorTheme.light .tabulator-footer {
+  border-top: 1px solid #ddd;
+  color: #333;
+}
+
+.tabulatorTheme.light .tabulator-tableHolder .tabulator-table .tabulator-row {
+  color: #333;
+  background-color: transparent;
+  border-bottom: 1px solid #ddd;
+}
+
+.tabulatorTheme.light .tabulator-page {
+  color: #333;
+}
+
+.tabulatorTheme.light .tabulator-page.active {
+  color: #000;
+}
+
+.tabulatorTheme.light .tabulator-tableHolder .tabulator-table .tabulator-row.tabulator-selectable:hover {
+  background-color: #e6e6e6 !important;
+}

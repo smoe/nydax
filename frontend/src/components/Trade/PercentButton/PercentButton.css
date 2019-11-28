@@ -1,0 +1,41 @@
+@import '../../variables.css';
+
+.PercentButton {
+  border-radius: 2px !important;
+  color: var(--sub-title-color) !important;
+  border: 1px solid #353e5c !important;
+  height: 30px;
+  background-color: transparent;
+  padding: 5px 12px !important;
+  margin: 0 5px 5px 0;
+  transition: 0.3s;
+  outline: 0;
+
+  &.dark {
+    color: var(--sub-title-color) !important;
+    border: 1px solid var(--border-dark) !important;
+
+    &:hover {
+      background-color: #354061;
+    }
+  }
+
+  &.darkCmc {
+    color: var(--sub-title-color) !important;
+    border: 1px solid var(--border-darkCmc) !important;
+
+    &:hover {
+      background-color: #354061;
+    }
+  }
+
+  &.light {
+    color: #333 !important;
+    border: 1px solid #ddd !important;
+
+    &:hover {
+      background-color: #e6e6e6;
+      border: 1px solid #adadad;
+    }
+  }
+}

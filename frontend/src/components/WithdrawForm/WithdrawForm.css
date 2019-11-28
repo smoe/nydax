@@ -1,0 +1,167 @@
+@import '../variables.css';
+
+.tokenName {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.feeContainer {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.dashedDivider {
+  border-bottom: 1px dashed #0cadff;
+}
+
+.feeLabel,
+.feeValue {
+  color: var(--sub-title-color);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: normal;
+  margin: 0;
+}
+
+.customBtn {
+  border-radius: 2px !important;
+  color: white !important;
+  border: 0 !important;
+  height: 40px;
+  background-color: #7577ff !important;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.customInput {
+  width: 90%;
+
+  input {
+    border: 1px solid;
+    border-radius: 2px !important;
+    height: 45px;
+  }
+}
+
+.withdrawInputContainer {
+  display: flex;
+  align-items: center;
+  height: 100px;
+  padding: 2rem;
+  border: 1px solid;
+  border-radius: 4px;
+
+  > div {
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .inputLabel {
+    color: var(--sub-title-color);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+  }
+
+  .tokenIcon {
+    margin-right: 20px;
+  }
+}
+
+.root {
+  &.light {
+    .withdrawInputContainer {
+      border-color: var(--border-light);
+
+      .value {
+        color: var(--text-light);
+      }
+
+      .inputLabel {
+        color: var(--text-light);
+      }
+    }
+
+    .dashedDivider {
+      border-bottom: 1px dashed var(--border-light);
+    }
+
+    .tokenName {
+      color: var(--text-light);
+    }
+
+    .customInput {
+      input {
+        border-color: var(--border-light);
+        color: var(--text-light);
+        background-color: var(--background-light);
+      }
+    }
+  }
+
+  &.dark {
+    .withdrawInputContainer {
+      border-color: var(--border-dark);
+
+      .value {
+        color: var(--text-dark);
+      }
+
+      .inputLabel {
+        color: var(--text-dark);
+      }
+    }
+
+    .dashedDivider {
+      border-bottom: 1px dashed var(--border-dark);
+    }
+
+    .tokenName {
+      color: var(--text-dark);
+    }
+
+    .customInput {
+      input {
+        border-color: var(--border-dark);
+        color: var(--text-dark);
+        background-color: var(--background-dark);
+      }
+    }
+  }
+
+  &.darkCmc {
+    .withdrawInputContainer {
+      border-color: var(--border-darkCmc);
+
+      .value {
+        color: var(--text-darkCmc);
+      }
+
+      .inputLabel {
+        color: var(--text-darkCmc);
+      }
+    }
+
+    .dashedDivider {
+      border-bottom: 1px dashed var(--border-darkCmc);
+    }
+
+    .tokenName {
+      color: var(--text-darkCmc);
+    }
+
+    .customInput {
+      input {
+        border-color: var(--border-darkCmc);
+        color: var(--text-darkCmc);
+        background-color: var(--background-darkCmc);
+      }
+    }
+  }
+}

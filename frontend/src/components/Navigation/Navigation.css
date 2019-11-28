@@ -1,0 +1,131 @@
+@import '../variables.css';
+
+.headerNavigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  overflow: hidden;
+  box-shadow: 0 2px 9px 1px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+
+  nav {
+    height: inherit;
+    width: inherit;
+
+    ul {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      align-content: center;
+      height: inherit;
+      list-style: none;
+
+      a {
+        width: inherit;
+        height: inherit;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        font-size: 14px;
+        font-weight: bold;
+        border-bottom: 1px solid transparent;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-shadow: 0 2px 9px #7577ff5b;
+        color: #7577ff !important;
+        transition: 0.3s;
+
+        svg {
+          > g {
+            stroke: #7577ff !important;
+          }
+        }
+      }
+
+      li {
+        height: inherit;
+        margin-right: 60px;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        transition: 0.3s;
+
+        &.active {
+          border-bottom: 2px solid #7577ff;
+
+          a {
+            color: #7577ff !important;
+          }
+
+          svg {
+            > g {
+              stroke: #7577ff !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.light {
+    color: var(--text-light);
+    background-color: var(--primary-light);
+
+    nav ul li a {
+      color: var(--text-light);
+    }
+  }
+
+  &.dark {
+    color: var(--text-dark);
+    background-color: var(--primary-dark);
+
+    nav ul li a {
+      color: var(--text-dark);
+    }
+  }
+
+  &.darkCmc {
+    color: var(--text-darkCmc);
+    background-color: var(--primary-darkCmc);
+
+    nav ul li a {
+      color: var(--text-darkCmc);
+    }
+  }
+}
+
+@media (--sm-viewport) {
+  .headerNavigation {
+    height: 0;
+    transition: 0.3s;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  nav ul li {
+    margin-right: 20px !important;
+    transition: 0.3s;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  nav ul li {
+    margin-right: 20px !important;
+    transition: 0.3s;
+  }
+}
+
+@media (--md-viewport) {
+  nav ul li {
+    transition: 0.3s;
+    margin-right: 20px !important;
+  }
+}
+
+.inviteFriends {
+  font-weight: bold;
+}

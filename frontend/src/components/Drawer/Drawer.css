@@ -1,0 +1,126 @@
+@import '../variables.css';
+
+.sidebarOverlay {
+  display: none;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+
+  &.active {
+    display: block;
+    opacity: 0.5;
+  }
+}
+
+.menu {
+  padding: 0;
+  list-style: none;
+  position: relative;
+  top: 50px;
+}
+
+.menuItem {
+  line-height: 40px;
+
+  a {
+    display: flex;
+    height: inherit;
+    align-items: center;
+    font-size: 20px;
+  }
+
+  .menuIcon {
+    justify-self: flex-start;
+    margin-right: 15px;
+    margin-left: 10px;
+    margin-bottom: 3px;
+  }
+
+  &.active {
+    background: #aca6b7;
+
+    a {
+      color: #393147;
+    }
+  }
+}
+
+.dismiss {
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  color: white;
+  top: 10px;
+  right: 10px;
+  border-radius: 5px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+
+  &:hover {
+    background: rgb(43, 34, 49);
+    color: rgb(121, 111, 158);
+  }
+}
+
+.sidebarDrawer {
+  min-width: 250px;
+  max-width: 250px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: -250px;
+  z-index: 9999;
+  background: rgb(60, 52, 72);
+  transition: all 0.3s;
+
+  &.active {
+    left: 0 !important;
+    box-shadow: 2px 2px 9px rgba(0, 0, 0, 0.3);
+  }
+
+  &.dark {
+    background: rgb(60, 52, 72);
+
+    .dismiss {
+      color: white;
+
+      &:hover {
+        background: rgb(43, 34, 49);
+        color: rgb(121, 111, 158);
+      }
+    }
+  }
+
+  &.darkCmc {
+    background: #202020;
+
+    .dismiss {
+      color: white;
+
+      &:hover {
+        background: rgb(43, 34, 49);
+        color: var(--text-darkCmc);
+      }
+    }
+  }
+
+  &.light {
+    background: #f4f4f4;
+
+    .dismiss {
+      color: black;
+
+      &:hover {
+        background: #adadad;
+        color: rgb(121, 111, 158);
+      }
+    }
+  }
+}

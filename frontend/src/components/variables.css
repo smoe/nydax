@@ -1,0 +1,78 @@
+:root {
+  /*
+   * Typography
+   * ======================================================================== */
+
+  --font-family-base: 'Segoe UI', 'HelveticaNeue-Light', sans-serif;
+
+  /*
+   * Theme colors
+   * ======================================================================== */
+
+  --primary-light: #fff;
+  --body-background-light: #f5f5f5;
+  --background-light: white;
+  --text-light: #333;
+  --number-light: #333;
+  --scroll-light: #c3c8d8;
+  --panel-border-light: #fff;
+  --border-light: #ddd;
+  --divider-light: #ddd;
+  --hover-background-light: #e6e6e6;
+  --hover-border-light: #adadad;
+  --focus-input-border-light: #7577ff;
+  --heading-light: #7577ff;
+  --selectedListItem-light: #e6e6e6;
+  --green-color: #2cb950;
+  --red-color: #f33;
+  --sub-title-color: #8997c0;
+  --primary-dark: #252d47;
+  --body-background-dark: #1c2237;
+  --background-dark: #252d47;
+  --text-dark: #fff;
+  --number-dark: #fff;
+  --scroll-dark: #2e3653;
+  --panel-border-dark: #191e30;
+  --border-dark: #585d70;
+  --divider-dark: #353e5f;
+  --hover-background-dark: #475ba52e;
+  --hover-border-dark: #adadad;
+  --focus-input-border-dark: #7577ff;
+  --background-image-dark: none;
+  --heading-dark: #7577ff;
+  --header-dark: #131a33;
+  --selectedListItem-dark: #475ba52e;
+  --primary-darkCmc: #202020;
+  --body-background-darkCmc: #131313;
+  --background-darkCmc: #202020;
+  --text-darkCmc: #d3cccc;
+  --sub-title-darkCmc: #a5bdea;
+  --title-darkCmc: #fff;
+  --number-darkCmc: #fff;
+  --scroll-darkCmc: #2e3653;
+  --panel-border-darkCmc: #191e30;
+  --border-darkCmc: #3b3b3b;
+  --divider-darkCmc: #3b3b3b;
+  --hover-background-darkCmc: #4c4c4c;
+  --hover-border-darkCmc: #adadad;
+  --focus-input-border-darkCmc: #7577ff;
+  --background-image-darkCmc: none;
+  --heading-darkCmc: #7577ff;
+  --header-darkCmc: #131a33;
+  --selectedListItem-darkCmc: #475ba52e;
+
+  /*
+   * Layout
+   * ======================================================================== */
+
+  --max-content-width: 1000px;
+
+  /*
+   * Media queries breakpoints
+   * ======================================================================== */
+
+  @custom-media --xs-viewport (max-width: 480px); /* Extra small screen / phone */
+  @custom-media --sm-viewport (max-width: 768px); /* Small screen / tablet */
+  @custom-media --md-viewport (max-width: 992px); /* Medium screen / desktop */
+  @custom-media --lg-viewport (max-width: 1200px); /* Large screen / wide desktop */
+}

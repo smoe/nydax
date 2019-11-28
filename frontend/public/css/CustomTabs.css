@@ -1,0 +1,106 @@
+.customTab {
+  height: inherit;
+}
+
+.customTab .tab-content {
+  height: calc(100% - 40px); /* 38px is row-height of ul */
+}
+
+.customTab .tab-content .tab-pane.active {
+  height: 100%;
+}
+
+.customTab > ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.customTab > ul::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+.customTab > ul::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.customTab > ul::-webkit-scrollbar-thumb {
+  background: rgba(121, 120, 120, 0.5);
+}
+
+.customTab.right > ul {
+  justify-content: flex-end !important;
+}
+
+.customTab.left > ul {
+  justify-content: flex-start !important;
+}
+
+.customTab.light > ul {
+  border-bottom: 2px solid #ddd;
+}
+
+.customTab.dark > ul {
+  border-bottom: 2px solid #353e5f;
+}
+
+.customTab.darkCmc > ul {
+  border-bottom: 2px solid #3b3b3b;
+}
+
+.customTab > ul::-webkit-scrollbar-thumb:hover {
+  background: rgba(121, 120, 120, 0.5);
+}
+
+.customTab > ul li {
+  color: #767bff;
+  flex-shrink: 0;
+}
+
+.customTab > ul li > a {
+  color: #97a1c0;
+  line-height: 1;
+}
+
+.customTab > ul li > a:hover {
+  color: #767bff;
+  border-color: transparent;
+  background-color: transparent;
+}
+
+.customTab > ul li > a:focus {
+  color: #767bff;
+  border-color: transparent;
+  background-color: transparent;
+}
+
+.customTab > ul li.active a {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px solid #767bff;
+  color: #767bff;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: default;
+}
+
+.customTab > ul li.active a:hover {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px solid #767bff;
+  color: #767bff;
+  font-size: 14px;
+  cursor: default;
+}
+
+.customTab > ul li.active a:focus {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px solid #767bff;
+  color: #767bff;
+  font-size: 14px;
+  cursor: default;
+}

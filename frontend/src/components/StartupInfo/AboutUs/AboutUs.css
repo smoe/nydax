@@ -1,0 +1,79 @@
+@import '../../variables.css';
+
+.root {
+  .header {
+    height: 40px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    color: #7577ff;
+    padding: 10px 0 10px 15px;
+  }
+
+  .description {
+    padding: 15px 25px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+  }
+
+  .info1 {
+    padding: 15px 25px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    font-size: 12px;
+  }
+
+  .info2 {
+    padding: 15px 25px;
+    font-size: 12px;
+  }
+
+  .icon {
+    margin-right: 15px;
+    display: inline-block;
+    float: left;
+  }
+
+  .title {
+    width: 20%;
+    display: inline-block;
+    float: left;
+  }
+
+  .value {
+    width: 65%;
+    display: inline-block;
+  }
+
+  &.light {
+    color: var(--text-light);
+    background-color: var(--background-light);
+
+    .header,
+ .description,
+ .info1 {
+      border-bottom-color: var(--border-light);
+    }
+  }
+
+  &.dark {
+    color: var(--text-dark);
+    background-color: var(--background-dark);
+
+    .header,
+ .description,
+ .info1 {
+      border-bottom-color: var(--border-dark);
+    }
+  }
+
+  &.darkCmc {
+    color: var(--text-darkCmc);
+    background-color: var(--background-darkCmc);
+
+    .header,
+ .description,
+ .info1 {
+      border-bottom-color: var(--border-darkCmc);
+    }
+  }
+}

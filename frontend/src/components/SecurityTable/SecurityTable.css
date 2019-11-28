@@ -1,0 +1,53 @@
+@import '../variables.css';
+
+.root {
+  &.light {
+    .headerContainer {
+      border-top-color: var(--border-light);
+    }
+
+    .rowContainer {
+      border-top-color: var(--border-light);
+      color: var(--text-light);
+    }
+  }
+
+  &.dark {
+    .headerContainer {
+      border-top-color: var(--border-dark);
+    }
+
+    .rowContainer {
+      border-top-color: var(--border-dark);
+      color: var(--text-dark);
+    }
+  }
+
+  &.darkCmc {
+    .headerContainer {
+      border-top-color: var(--border-darkCmc);
+    }
+
+    .rowContainer {
+      border-top-color: var(--border-darkCmc);
+      color: var(--text-darkCmc);
+    }
+  }
+}
+
+.header {
+  font-weight: bold;
+  line-height: 50px;
+}
+
+.headerContainer {
+  line-height: 40px;
+  border-top-width: 2px;
+  border-top-style: solid;
+}
+
+.rowContainer {
+  line-height: 80px;
+  border-top-width: 2px;
+  border-top-style: solid;
+}

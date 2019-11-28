@@ -1,0 +1,48 @@
+@import '../variables.css';
+
+.inviteFriends {
+  .modal-content {
+    border-radius: 10px !important;
+    background: aliceblue;
+  }
+}
+
+.headerTitle {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.customBtn {
+  border-radius: 2px !important;
+  color: white !important;
+  border: 0 !important;
+  height: 40px;
+  background-color: #7577ff !important;
+
+  /* width: 80%; */
+}
+
+.tagsInput {
+  margin-bottom: 10px;
+}
+
+.customInput {
+  label {
+    color: #363a4c;
+  }
+
+  input {
+    border-color: #ced3e3 !important;
+    color: #363a4c !important;
+    background-color: white !important;
+    border: 1px solid;
+    border-radius: 2px !important;
+    height: 45px;
+  }
+}
+
+.description {
+  color: var(--sub-title-color);
+  text-align: left !important;
+}

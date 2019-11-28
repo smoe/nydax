@@ -1,0 +1,128 @@
+@import '../../variables.css';
+
+.root {
+  height: inherit;
+
+  &.light {
+    .headerRow {
+      border-color: var(--border-light);
+      background: var(--background-light);
+
+      .colTitle {
+        color: var(--number-light);
+      }
+    }
+
+    .tableRow {
+      .tableCell {
+        color: var(--number-light);
+      }
+    }
+  }
+
+  &.dark {
+    .headerRow {
+      border-color: var(--border-dark);
+      background: var(--background-dark);
+
+      .colTitle {
+        color: var(--number-dark);
+      }
+    }
+
+    .tableRow {
+      .tableCell {
+        color: var(--number-dark);
+      }
+    }
+  }
+
+  &.darkCmc {
+    .headerRow {
+      border-color: var(--border-darkCmc);
+      background: var(--background-darkCmc);
+
+      .colTitle {
+        color: var(--number-darkCmc);
+      }
+    }
+
+    .tableRow {
+      .tableCell {
+        color: var(--number-darkCmc);
+      }
+    }
+  }
+}
+
+.headerRow {
+  position: sticky;
+  top: 0;
+  z-index: 25;
+  margin: 0;
+  border-bottom: 1px solid;
+  line-height: 38px;
+
+  .colTitle {
+    overflow: hidden;
+    padding: 0;
+    text-align: center;
+    font-weight: bold;
+    font-size: 13px;
+  }
+}
+
+.tableRow {
+  padding: 0;
+  margin: 0;
+
+  .rowBar {
+    width: 100%;
+    position: absolute;
+    padding: 0;
+    text-align: center;
+    overflow: hidden;
+    font-size: 13px;
+    font-weight: bold;
+
+    /* line-height: 10px; */
+
+    .bgBarRed {
+      background-color: var(--red-color);
+      opacity: 0.15;
+      display: flex;
+    }
+
+    .bgBarGreen {
+      background-color: var(--green-color);
+      opacity: 0.15;
+      display: flex;
+    }
+  }
+
+  .tableCell {
+    padding: 0;
+    text-align: center;
+    overflow: hidden;
+    font-size: 13px;
+    font-weight: bold;
+  }
+}
+
+@keyframes flasher {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.flash {
+  animation: flasher 1.5s linear;
+}

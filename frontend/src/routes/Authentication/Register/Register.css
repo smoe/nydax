@@ -1,0 +1,242 @@
+@import '../../../components/variables.css';
+
+.registerHeader {
+  text-align: center;
+  min-height: 20vh;
+
+  img {
+    margin: 40px 0;
+    max-width: 200px;
+  }
+}
+
+.registerContainer {
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 70vh;
+
+  .registerTitle {
+    font-size: 28px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    padding-top: 3rem;
+  }
+
+  .regForm {
+    padding: 3rem 1.5rem 2rem 1.5rem;
+
+    .rememberMe {
+      text-align: left;
+    }
+  }
+
+  .registerBtn {
+    height: 40px;
+    width: 100%;
+    background-color: #7577ff;
+    border-color: #7577ff;
+    border-radius: 2px;
+    opacity: 0.75;
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.71;
+    letter-spacing: normal;
+    text-align: center;
+    color: #fff;
+    border-width: 1px;
+    border-style: solid;
+
+    .registerBtn.active.focus,
+    .registerBtn.active:focus,
+    .registerBtn.focus,
+    .registerBtn:active.focus,
+    .registerBtn:focus,
+    .registerBtn:active:focus {
+      outline: 0;
+      outline-offset: -2px;
+    }
+  }
+}
+
+.registerFooter {
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  padding: 10px 0 2rem 0;
+  font-size: 15px;
+
+  .login {
+    cursor: pointer;
+    font-weight: bold;
+    padding-left: 10px;
+  }
+}
+
+.customInput {
+  input {
+    border: 1px solid;
+    border-radius: 2px !important;
+    height: 40px;
+  }
+}
+
+.registerMain {
+  /* display: flex;
+  flex-direction: column; */
+  display: flex;
+  flex-direction: column;
+
+  /* justify-content: space-between; */
+  min-height: 100vh;
+
+  &.light {
+    .registerContainer {
+      .registerTitle {
+        color: var(--text-light);
+      }
+
+      .regForm {
+        .rememberMe {
+          color: var(--text-light);
+        }
+      }
+    }
+
+    .registerFooter {
+      color: var(--text-light);
+    }
+
+    .customInput {
+      input {
+        border-color: var(--border-light);
+        color: var(--text-light);
+        background-color: var(--background-light);
+      }
+
+      input:-webkit-autofill {
+        -webkit-text-fill-color: var(--text-light) !important;
+      }
+
+      input:-webkit-autofill,
+      input:-webkit-autofill:hover,
+      input:-webkit-autofill:focus,
+      input:-webkit-autofill:active {
+        transition: background-color 5000s ease-in-out 0s;
+      }
+    }
+  }
+
+  &.dark {
+    .registerContainer {
+      .registerTitle {
+        color: var(--text-dark);
+      }
+
+      .regForm {
+        .rememberMe {
+          color: var(--text-dark);
+        }
+      }
+    }
+
+    .registerFooter {
+      color: var(--text-dark);
+    }
+
+    .customInput {
+      input {
+        border-color: var(--border-dark);
+        color: var(--text-dark);
+        background-color: var(--background-dark);
+      }
+
+      input:-webkit-autofill {
+        -webkit-text-fill-color: var(--text-dark) !important;
+      }
+
+      input:-webkit-autofill,
+      input:-webkit-autofill:hover,
+      input:-webkit-autofill:focus,
+      input:-webkit-autofill:active {
+        transition: background-color 5000s ease-in-out 0s;
+      }
+    }
+  }
+
+  &.darkCmc {
+    .registerContainer {
+      .registerTitle {
+        color: var(--text-darkCmc);
+      }
+
+      .regForm {
+        .rememberMe {
+          color: var(--text-darkCmc);
+        }
+      }
+    }
+
+    .registerFooter {
+      color: var(--text-darkCmc);
+    }
+
+    .customInput {
+      input {
+        border-color: var(--border-darkCmc);
+        color: var(--text-darkCmc);
+        background-color: var(--background-darkCmc);
+      }
+
+      input:-webkit-autofill {
+        -webkit-text-fill-color: var(--text-darkCmc) !important;
+      }
+
+      input:-webkit-autofill,
+      input:-webkit-autofill:hover,
+      input:-webkit-autofill:focus,
+      input:-webkit-autofill:active {
+        transition: background-color 5000s ease-in-out 0s;
+      }
+    }
+  }
+}
+
+@media (--md-viewport) {
+  .registerMain {
+    justify-content: space-between;
+    min-height: 100vh;
+  }
+}
+
+@media (--sm-viewport) {
+  .registerContainer {
+    width: 95% !important;
+
+    .registerTitle {
+      font-size: 18px;
+      font-weight: bold;
+    }
+  }
+
+  .registerFooter {
+    position: relative !important;
+  }
+
+  .registerHeader {
+    flex-direction: column;
+    height: 150px;
+    align-items: center;
+    justify-content: flex-start;
+
+    img {
+      width: 50%;
+    }
+  }
+}

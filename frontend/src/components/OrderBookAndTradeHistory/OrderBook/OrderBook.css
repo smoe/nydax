@@ -1,0 +1,234 @@
+@import '../../variables.css';
+
+.headerRow {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  z-index: 25;
+  margin: 0;
+  border-bottom: 1px solid;
+  line-height: 38px;
+
+  .colTitle {
+    overflow: hidden;
+    padding: 0;
+    padding-left: 5px;
+    text-align: left;
+    font-weight: bold;
+    font-size: 1vw;
+  }
+}
+
+.tableRow {
+  padding: 0;
+  margin: 0;
+
+  .rowBar {
+    width: 100%;
+    position: absolute;
+    padding: 0;
+    text-align: left;
+    overflow: hidden;
+    font-size: 13px;
+    font-weight: bold;
+
+    /* line-height: 10px; */
+
+    .bgBarRed {
+      background-color: var(--red-color);
+      opacity: 0.15;
+      display: flex;
+    }
+
+    .bgBarGreen {
+      background-color: var(--green-color);
+      opacity: 0.15;
+      display: flex;
+    }
+  }
+
+  .tableCell {
+    padding: 0;
+    padding-left: 5px;
+    text-align: left;
+    overflow: hidden;
+    font-size: 13px;
+    font-weight: bold;
+  }
+}
+
+.sellContainer {
+  height: calc(45% + 19px);
+  overflow: hidden;
+}
+
+.buyContainer {
+  height: calc(45% - 19px);
+  overflow: hidden;
+}
+
+.currentOrderInfo {
+  height: 10%;
+  width: 100%;
+  font-weight: bold;
+
+  /* padding: 2rem; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  font-size: 1.2vw;
+
+  .red {
+    color: var(--red-color) !important;
+
+    /* font-size: 12px; */
+    font-weight: bold;
+  }
+
+  .green {
+    color: var(--green-color) !important;
+
+    /* font-size: 12px; */
+  }
+
+  .price {
+    /* font-size: 12px; */
+
+    // font-size: 1.2vw;
+  }
+}
+
+.root {
+  height: inherit;
+
+  &.light {
+    .headerRow {
+      border-color: var(--border-light);
+      background: var(--background-light);
+
+      .colTitle {
+        color: var(--number-light);
+      }
+    }
+
+    .tableRow {
+      .tableCell {
+        color: var(--number-light);
+      }
+    }
+
+    .currentOrderInfo {
+      background: var(--border-light);
+
+      .price {
+        color: var(--number-light);
+      }
+    }
+  }
+
+  &.dark {
+    .headerRow {
+      border-color: var(--border-dark);
+      background: var(--background-dark);
+
+      .colTitle {
+        color: var(--number-dark);
+      }
+    }
+
+    .tableRow {
+      .tableCell {
+        color: var(--number-dark);
+      }
+    }
+
+    .currentOrderInfo {
+      background: var(--border-dark);
+      border-top: 1px solid #4d5b68;
+      border-bottom: 1px solid #4d5b68;
+
+      .price {
+        color: var(--number-dark);
+      }
+    }
+  }
+
+  &.darkCmc {
+    .headerRow {
+      border-color: var(--border-darkCmc);
+      background: var(--background-darkCmc);
+
+      .colTitle {
+        color: var(--number-darkCmc);
+      }
+    }
+
+    .tableRow {
+      .tableCell {
+        color: var(--number-darkCmc);
+      }
+    }
+
+    .currentOrderInfo {
+      background: var(--border-darkCmc);
+      border-top: 1px solid #4d5b68;
+      border-bottom: 1px solid #4d5b68;
+
+      .price {
+        color: var(--number-darkCmc);
+      }
+    }
+  }
+}
+
+@media (--sm-viewport) {
+  .currentOrderInfo {
+    .price {
+      font-size: 12px;
+    }
+
+    .green {
+      font-size: 12px;
+    }
+
+    .red {
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    .rowBar {
+      font-size: 12px;
+    }
+
+    .tableCell {
+      font-size: 12px;
+    }
+  }
+
+  .headerRow {
+    .colTitle {
+      font-size: 12px;
+    }
+  }
+}
+
+@keyframes flasher {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.flash {
+  animation: flasher 1.5s linear;
+}

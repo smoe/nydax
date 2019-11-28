@@ -1,0 +1,102 @@
+@import '../variables.css';
+
+.closeIcon {
+  display: none;
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  font-size: 14px;
+  padding: 2px 5px 2px 5px;
+  border-radius: 5px;
+  z-index: 100;
+  color: #fff;
+}
+
+.chartInfo {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 20px;
+
+  .name {
+    font-size: 14px;
+    color: var(--sub-title-color);
+    margin: 0;
+  }
+
+  .amount {
+    font-size: 20px;
+    margin: 0;
+  }
+
+  .red {
+    font-size: 13px;
+    color: #fa5252;
+  }
+
+  .green {
+    font-size: 13px;
+    color: #12b886;
+  }
+}
+
+.customPanel {
+  margin-bottom: 0 !important;
+  border-radius: 2px;
+  box-shadow: 0 1px 15px 1px rgba(0, 0, 0, 0.05);
+  font-size: 12px;
+  padding: 0;
+  -webkit-transition: box-shadow 0.5s;
+  transition: box-shadow 0.5s;
+
+  &.light {
+    background-color: var(--background-light);
+
+    .chartInfo {
+      color: var(--number-light);
+    }
+
+    .closeIcon {
+      color: var(--sub-title-color);
+    }
+  }
+
+  &.dark {
+    background-color: var(--background-dark);
+
+    .chartInfo {
+      color: var(--number-dark);
+    }
+
+    .closeIcon {
+      color: #fff;
+    }
+  }
+
+  &.darkCmc {
+    background-color: var(--background-darkCmc);
+
+    .chartInfo {
+      color: var(--number-darkCmc);
+    }
+
+    .closeIcon {
+      color: #fff;
+    }
+  }
+
+  > div {
+    padding: 0 !important;
+    position: relative;
+  }
+
+  &:hover {
+    box-shadow: 0 0 10px #34476a;
+    cursor: pointer;
+
+    .closeIcon {
+      display: block;
+    }
+  }
+}

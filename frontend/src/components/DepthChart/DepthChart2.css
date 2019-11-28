@@ -1,0 +1,19 @@
+@import '../variables.css';
+
+.depthChartContainer {
+  /* width: '100%'; */
+
+  /* height: 'inherit'; */
+
+  &.light {
+    background: var(--background-light);
+  }
+
+  &.dark {
+    background: var(--background-dark);
+  }
+
+  &.darkCmc {
+    background: var(--background-darkCmc);
+  }
+}

@@ -1,0 +1,38 @@
+@import '../variables.css';
+
+.cardArticle {
+  font-size: 0;
+  width: 100%;
+  line-height: 1.5;
+
+  .text {
+    height: 66px;
+    font-family: HelveticaNeue, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+
+    @media (min-width: 1024px) {
+      font-size: 15px;
+    }
+  }
+
+  .readMore {
+    height: 12px;
+  }
+
+  .light {
+    color: var(--text-light);
+  }
+
+  .dark {
+    color: var(--text-dark);
+  }
+
+  .darkCmc {
+    color: var(--text-darkCmc);
+  }
+}

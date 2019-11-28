@@ -1,0 +1,6 @@
+{
+  "name": "AddPaymentModal",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./AddPaymentModal.js"
+}

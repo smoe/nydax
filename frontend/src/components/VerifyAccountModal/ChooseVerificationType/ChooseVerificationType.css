@@ -1,0 +1,43 @@
+@import '../../variables.css';
+
+.headerTitle {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.iconsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &.formInline,
+  .formInline {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  padding: 40px;
+}
+
+.description {
+  color: var(--sub-title-color);
+  text-align: center;
+}
+
+.customBtn {
+  border-radius: 2px !important;
+  color: white !important;
+  border: 0 !important;
+  height: 40px;
+  background-color: #7577ff !important;
+  width: 100%;
+}

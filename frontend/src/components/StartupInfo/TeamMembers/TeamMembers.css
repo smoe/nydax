@@ -1,0 +1,65 @@
+@import '../../variables.css';
+
+.root {
+  .header {
+    height: 40px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    color: #7577ff;
+    padding: 10px 0 10px 15px;
+  }
+
+  .description {
+    padding: 15px 25px;
+  }
+
+  .members {
+    padding: 15px 25px;
+  }
+
+  .teamMemberCard {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 12px;
+
+    img {
+      float: left;
+      width: 75px;
+      height: auto;
+      margin-right: 10px;
+      border-radius: 100px;
+    }
+
+    .teamMemberName {
+      font-weight: bold;
+    }
+  }
+
+  &.light {
+    color: var(--text-light);
+    background-color: var(--background-light);
+
+    .header {
+      border-bottom-color: var(--border-light);
+    }
+  }
+
+  &.dark {
+    color: var(--text-dark);
+    background-color: var(--background-dark);
+
+    .header {
+      border-bottom-color: var(--border-dark);
+    }
+  }
+
+  &.darkCmc {
+    color: var(--text-darkCmc);
+    background-color: var(--background-darkCmc);
+
+    .header {
+      border-bottom-color: var(--border-darkCmc);
+    }
+  }
+}

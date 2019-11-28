@@ -1,0 +1,53 @@
+@import '../variables.css';
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.description {
+  color: var(--sub-title-color);
+  text-align: center;
+}
+
+.previewContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  cursor: pointer;
+  border: 1px solid var(--sub-title-color);
+}
+
+.progressBar {
+  margin-right: 20px;
+  width: 100%;
+}
+
+.headerTitle {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+.deleteBtn{
+  margin-top: -2px;
+  -webkit-appearance: none;
+  cursor: pointer;
+  background: #fff;
+  border: 0;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  text-transform: none;
+  overflow: visible;
+  position: absolute;
+  right: 31px;
+  border-radius: 5px;
+  padding: 0px 5px;
+  margin: 2px 1px;
+}

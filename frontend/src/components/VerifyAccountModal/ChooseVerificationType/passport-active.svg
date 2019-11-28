@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="36"
+   height="50"
+   viewBox="0 0 36 50"
+   version="1.1"
+   id="svg5403"
+   sodipodi:docname="passport-active.svg"
+   inkscape:version="0.92.4 (33fec40, 2019-01-16)">
+  <metadata
+     id="metadata5409">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs5407" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1366"
+     inkscape:window-height="713"
+     id="namedview5405"
+     showgrid="false"
+     inkscape:zoom="4.72"
+     inkscape:cx="-16.110169"
+     inkscape:cy="25"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg5403" />
+  <g
+     fill="none"
+     fill-rule="evenodd"
+     stroke="#363A4C"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     id="g5401"
+     style="fill:#7577ff;fill-opacity:1">
+    <path
+       d="M34.943 44.02L1 45.36V1.838L34.943 1z"
+       id="path5391"
+       style="fill:#7577ff;fill-opacity:1" />
+    <g
+       transform="translate(8 9)"
+       id="g5397"
+       style="fill:#7577ff;fill-opacity:1">
+      <circle
+         cx="10"
+         cy="10"
+         r="10"
+         id="circle5393"
+         style="fill:#7577ff;fill-opacity:1" />
+      <path
+         d="M0 10h20M10 0a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+         id="path5395"
+         style="fill:#7577ff;fill-opacity:1" />
+    </g>
+    <path
+       d="M7.935 38.093l19.831-.67M1 45.36l30.538 3.535v-4.741z"
+       id="path5399"
+       style="fill:#7577ff;fill-opacity:1" />
+  </g>
+</svg>

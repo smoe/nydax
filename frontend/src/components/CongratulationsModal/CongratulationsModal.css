@@ -1,0 +1,14 @@
+@import '../variables.css';
+
+.headerTitle {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.description {
+  color: var(--sub-title-color);
+  text-align: center;
+}

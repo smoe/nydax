@@ -1,0 +1,6 @@
+{
+  "name": "PrivacyPolicyModal",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./PrivacyPolicyModal.js"
+}

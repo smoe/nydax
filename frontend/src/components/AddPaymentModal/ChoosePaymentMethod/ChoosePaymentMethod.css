@@ -1,0 +1,42 @@
+@import '../../variables.css';
+
+.choosePaymentType {
+  text-align: center;
+
+  .headerTitle {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .des {
+    margin-top: 5px;
+    color: #8997c0;
+    text-align: center;
+
+    &.right {
+      text-align: right !important;
+    }
+
+    &.left {
+      text-align: left !important;
+    }
+  }
+
+  .iconRow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .item {
+      margin: 10px;
+      border: 1px solid var(--sub-title-color);
+      padding: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      border-radius: 3px;
+    }
+  }
+}

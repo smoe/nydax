@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="53"
+   height="38"
+   viewBox="0 0 53 38"
+   version="1.1"
+   id="svg4760"
+   sodipodi:docname="identity-card-active.svg"
+   inkscape:version="0.92.4 (33fec40, 2019-01-16)">
+  <metadata
+     id="metadata4766">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs4764" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1366"
+     inkscape:window-height="713"
+     id="namedview4762"
+     showgrid="false"
+     inkscape:zoom="6.2105263"
+     inkscape:cx="0.57627119"
+     inkscape:cy="19"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4760" />
+  <g
+     fill="none"
+     fill-rule="evenodd"
+     stroke="#363A4C"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     id="g4758"
+     style="fill:#7577ff;fill-opacity:1">
+    <path
+       d="M49.018 36.941H4.428C2.535 36.941 1 35.427 1 33.56V4.384C1 2.514 2.535 1 4.428 1h44.59c1.892 0 3.428 1.515 3.428 3.384v29.175c0 1.868-1.536 3.382-3.428 3.382zM30.54 13.17h14.066M30.54 18.97h14.066"
+       id="path4748"
+       style="fill:#7577ff;fill-opacity:1" />
+    <g
+       transform="translate(10 12)"
+       id="g4754"
+       style="fill:#7577ff;fill-opacity:1">
+      <path
+         d="M13 14.625V13a3.25 3.25 0 0 0-3.25-3.25h-6.5A3.25 3.25 0 0 0 0 13v1.625"
+         id="path4750"
+         style="fill:#7577ff;fill-opacity:1" />
+      <circle
+         cx="6.5"
+         cy="3.25"
+         r="3.25"
+         id="circle4752"
+         style="fill:#7577ff;fill-opacity:1" />
+    </g>
+    <path
+       d="M30.54 25.246h7.9"
+       id="path4756"
+       style="fill:#7577ff;fill-opacity:1" />
+  </g>
+</svg>

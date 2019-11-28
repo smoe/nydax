@@ -1,0 +1,36 @@
+@import '../variables.css';
+
+@font-face {
+  font-family: HelveticaNeue;
+  src: url('./helveticaneue/HelveticaNeueLt.ttf');
+}
+
+.root {
+  font-family: 'Source Sans Pro', sans-serif;
+
+  /* padding-bottom: 10px; */
+
+  /* letter-spacing: 1px; */
+
+  /* font-family: IRANSans, 'HelveticaNeue-Light', sans-serif !important; */
+
+  /* font-size: 14px; */
+
+  /* line-height: 1.4; */
+
+  /* color: #34495e; */
+  min-height: 100vh;
+  position: relative;
+
+  &.light {
+    background-color: var(--body-background-light);
+  }
+
+  &.dark {
+    background-color: var(--body-background-dark);
+  }
+
+  &.darkCmc {
+    background-color: var(--body-background-darkCmc);
+  }
+}

@@ -1,0 +1,17 @@
+.swal-button--danger {
+  background-color: #f33 !important;
+}
+
+.swal-icon--warning {
+  border-color: #f33 !important;
+  -webkit-animation: none;
+  animation: none;
+}
+
+.swal-icon--warning__body {
+  background-color: #f33 !important;
+}
+
+.swal-icon--warning__dot {
+  background-color: #f33 !important;
+}

@@ -1,0 +1,335 @@
+@import '../variables.css';
+
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.tradeInput {
+  &.form-group {
+    margin-bottom: 5px !important;
+  }
+
+  .beforInput {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+  }
+
+  .priceInput {
+    padding-right: 5px !important;
+  }
+
+  input {
+    -webkit-appearance: none;
+    padding-right: 80px !important;
+
+    /* border-color: #ced3e3; */
+    border-radius: 4px;
+  }
+
+  .form-control:focus {
+    border-color: #bfc4d3;
+    outline: 0;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(142, 161, 177, 0.6);
+  }
+
+  .currencySelect {
+    width: 70px;
+    pointer-events: all;
+    background: no-repeat transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 0;
+
+    option {
+      color: #000;
+    }
+
+    &:focus {
+      outline: 0;
+    }
+  }
+}
+
+.walletInfo {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+
+  > span {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.atMarketTick {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.innerSpace {
+  padding: 15px !important;
+}
+
+.buyContainer,
+.sellContainer {
+  min-width: 300px;
+
+  /* min-height: 390px; */
+
+  p {
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+
+  .transactionFee {
+    color: var(--sub-title-color);
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+  }
+
+  .totalCost {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .sellBtn {
+    color: white;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    height: 40px;
+
+    .sell {
+      border-radius: 4px;
+      width: 100%;
+      text-align: center;
+      vertical-align: middle;
+      background-color: var(--red-color);
+      border: 1px solid var(--red-color);
+      transition: 0.3ms;
+
+      &:active {
+        background-color: #fa5252;
+      }
+
+      /* &:hover{
+        transform: scale(1.03);
+        transition: all ease 500ms;
+      } */
+    }
+  }
+
+  .buyBtn {
+    color: white;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    height: 40px;
+
+    .buy {
+      border-radius: 4px;
+      width: 100%;
+      text-align: center;
+      vertical-align: middle;
+      background-color: var(--green-color);
+      border: 1px solid var(--green-color);
+      transition: 0.3ms;
+
+      &:active {
+        background-color: #12b886;
+      }
+
+      /* &:hover{
+        transform: scale(1.03);
+        transition: all ease 500ms;
+      } */
+    }
+  }
+
+  .login {
+    border-radius: 4px;
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #7577ff;
+    border: 1px solid #7577ff;
+    transition: 0.3ms;
+  }
+
+  &.light {
+    p {
+      color: var(--text-light);
+    }
+
+    .totalCost {
+      color: var(--number-light);
+    }
+
+    .tradeInput {
+      .beforInput {
+        color: var(--number-light);
+        background-color: var(--background-light);
+        border-color: var(--border-light);
+      }
+
+      .priceInput {
+        color: var(--number-light);
+        background-color: var(--background-light);
+      }
+
+      .amountInput {
+        color: var(--number-light);
+        background-color: var(--background-light);
+      }
+
+      input {
+        color: var(--number-light);
+        border-color: var(--border-light);
+      }
+
+      .currencySelect {
+        color: var(--number-light);
+        border-color: var(--border-light);
+      }
+    }
+
+    .isMarket {
+      color: var(--number-light);
+    }
+
+    .walletInfo {
+      color: var(--number-light);
+    }
+
+    .atMarketTick {
+      color: var(--number-light);
+    }
+
+    .innerSpace {
+      color: var(--number-light);
+    }
+  }
+
+  &.dark {
+    p {
+      color: var(--number-dark);
+    }
+
+    .totalCost {
+      color: var(--number-dark);
+    }
+
+    .tradeInput {
+      .beforInput {
+        color: var(--number-dark);
+        background-color: var(--background-dark);
+        border-color: var(--border-dark);
+      }
+
+      .priceInput {
+        color: var(--number-dark);
+        background-color: var(--background-dark);
+      }
+
+      .amountInput {
+        color: var(--number-dark);
+        background-color: var(--background-dark);
+      }
+
+      input {
+        color: var(--number-dark);
+        border-color: var(--border-dark);
+      }
+
+      .currencySelect {
+        color: var(--number-dark);
+        border-color: var(--border-dark);
+      }
+    }
+
+    .isMarket {
+      color: var(--number-dark);
+    }
+
+    .walletInfo {
+      color: var(--number-dark);
+    }
+
+    .atMarketTick {
+      color: var(--number-dark);
+    }
+
+    .innerSpace {
+      color: var(--number-dark);
+    }
+  }
+
+  &.darkCmc {
+    p {
+      color: var(--number-darkCmc);
+    }
+
+    .totalCost {
+      color: var(--number-darkCmc);
+    }
+
+    .tradeInput {
+      .beforInput {
+        color: var(--number-darkCmc);
+        background-color: var(--background-darkCmc);
+        border-color: var(--border-darkCmc);
+      }
+
+      .priceInput {
+        color: var(--number-darkCmc);
+        background-color: var(--background-darkCmc);
+      }
+
+      .amountInput {
+        color: var(--number-darkCmc);
+        background-color: var(--background-darkCmc);
+      }
+
+      input {
+        color: var(--number-darkCmc);
+        border-color: var(--border-darkCmc);
+      }
+
+      .currencySelect {
+        color: var(--number-darkCmc);
+        border-color: var(--border-darkCmc);
+      }
+    }
+
+    .isMarket {
+      color: var(--number-darkCmc);
+    }
+
+    .walletInfo {
+      color: var(--number-darkCmc);
+    }
+
+    .atMarketTick {
+      color: var(--number-darkCmc);
+    }
+
+    .innerSpace {
+      color: var(--number-darkCmc);
+    }
+  }
+}
+
+@media (--md-viewport) {
+  .sellContainer {
+    padding-left: 15px;
+  }
+
+  .buyContainer {
+    padding-right: 15px;
+  }
+}

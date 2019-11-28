@@ -1,0 +1,275 @@
+@import '../variables.css';
+
+.star {
+  margin-right: 5px;
+
+  /* text-align: left;
+  width: 24px; */
+  > span { float: none !important; }
+}
+
+.sortableTable {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  thead {
+    display: block;
+
+    tr {
+      display: flex;
+      width: 100%;
+    }
+
+    td {
+      font-size: 14px !important;
+      text-align: left;
+      font-weight: bold;
+      vertical-align: middle;
+      padding-left: 5px;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      .columnHeader {
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+      }
+    }
+  }
+
+  tbody {
+    display: block;
+    overflow-y: auto;
+
+    tr {
+      display: flex;
+      width: 100%;
+      cursor: pointer;
+
+      td {
+        text-align: left;
+        padding-left: 5px;
+        font-size: 14px;
+        flex: 1;
+        display: flex;
+        align-items: center;
+        // font-weight: bold;
+
+        /* width: 10%; */
+      }
+    }
+
+    &::-webkit-scrollbar {
+      width: 4px;
+      height: 4px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: rgba(0, 0, 0, 0.2);
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background: rgba(0, 0, 0, 0.2);
+    }
+  }
+}
+
+.gotoAdvancedExchangeContainer {
+  /* width: 45%; */
+
+  .gotoAdvancedExchange {
+    width: 100%;
+    height: 30px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 3px;
+
+    /* border-color: white; */
+
+    /* border: none; */
+    cursor: pointer;
+  }
+}
+
+.scrollable {
+  height: 100%;
+  font-size: 11px;
+  overflow-x: auto;
+
+  &.light {
+    &::-webkit-scrollbar-thumb {
+      background: var(--scroll-light);
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background: var(--scroll-light);
+    }
+
+    .sortableTable {
+      thead {
+        border-bottom: 1px solid var(--border-light);
+
+        td {
+          color: var(--number-light);
+        }
+      }
+
+      tbody tr {
+        border-bottom: 1px solid var(--border-light);
+
+        &.selectedToken {
+          background-color: var(--selectedListItem-light);
+        }
+
+        td {
+          color: var(--number-light);
+        }
+
+        &:hover {
+          background-color: var(--hover-background-light);
+        }
+      }
+    }
+
+    .gotoAdvancedExchangeContainer {
+      .gotoAdvancedExchange {
+        border-color: var(--number-light);
+        color: var(--number-light);
+      }
+    }
+  }
+
+  &.dark {
+    &::-webkit-scrollbar-thumb {
+      background: var(--scroll-dark);
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background: var(--scroll-dark);
+    }
+
+    .sortableTable {
+      thead {
+        border-bottom: 1px solid var(--border-dark);
+
+        td {
+          color: var(--number-dark);
+        }
+      }
+
+      tbody tr {
+        border-bottom: 1px solid var(--border-dark);
+
+        &.selectedToken {
+          background-color: var(--selectedListItem-dark);
+        }
+
+        td {
+          color: var(--number-dark);
+        }
+
+        &:hover {
+          background-color: var(--hover-background-dark);
+        }
+      }
+    }
+
+    .gotoAdvancedExchangeContainer {
+      .gotoAdvancedExchange {
+        border-color: var(--number-dark);
+        color: var(--number-dark);
+      }
+    }
+  }
+
+  &.darkCmc {
+    &::-webkit-scrollbar-thumb {
+      background: var(--scroll-darkCmc);
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background: var(--scroll-darkCmc);
+    }
+
+    .sortableTable {
+      thead {
+        border-bottom: 1px solid var(--border-darkCmc);
+
+        td {
+          color: var(--number-darkCmc);
+        }
+      }
+
+      tbody tr {
+        border-bottom: 1px solid var(--border-darkCmc);
+
+        &.selectedToken {
+          background-color: var(--selectedListItem-darkCmc);
+        }
+
+        td {
+          color: var(--number-darkCmc);
+        }
+
+        &:hover {
+          background-color: var(--hover-background-darkCmc);
+        }
+      }
+    }
+
+    .gotoAdvancedExchangeContainer {
+      .gotoAdvancedExchange {
+        border-color: var(--number-darkCmc);
+        color: var(--number-darkCmc);
+      }
+    }
+  }
+
+  &::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+}
+
+@media (--xs-viewport) {
+  .sortableTable {
+    thead td span {
+      font-size: 11px !important;
+    }
+
+    tbody td {
+      font-size: 10px;
+    }
+  }
+}
+
+@media (--sm-viewport) {
+  .hideXs {
+    display: none !important;
+  }
+}
+
+@media (--md-viewport) {
+  .gotoAdvancedExchange {
+    text-align: center;
+    width: auto !important;
+
+    .menuIcon {
+      display: none;
+    }
+  }
+}
