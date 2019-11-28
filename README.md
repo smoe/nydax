@@ -1,5 +1,5 @@
 
-IXP  - Digital Asset Trading Platform and Exchange, open source crypto currency exchange
+NYDAX  - Digital Asset Trading Platform and Exchange, open source crypto currency exchange
 
 
 ![NYDAX Dashboard](/images/NYDAX5.png)
