@@ -23,6 +23,8 @@ Open Your browser and browse http://IP:3000
 Enjoy.
 
 
+![NYDAX Dashboard](/images/NYDAX13.png)
+
 Basic functionalities:
 - User registration
 - User KYC
