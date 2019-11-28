@@ -4,7 +4,7 @@ NYDAX  - Digital Asset Trading Platform and Exchange, open source crypto currenc
 
 ![NYDAX Dashboard](/images/NYDAX5.png)
 
-NYDAX is an Enterprise grade Digital Asset Exchange Platform, Originally developed under a project called Innovation Netwrok and then used to power NYDAX Digital Asset Exchange, We have decided to make the source code avaiable to public so that other users can benefit from it, Code is been provided as it is and we are not suggesting to use this code for production environment, however it gives you a good base to start with. If you want service support on this code please contact us through hello at nydax.com
+NYDAX is an Enterprise grade Digital Asset Exchange Platform, originally developed under a project called Innovation Network and then used to power NYDAX Digital Asset Exchange. We have decided to make the source code avaiable to public so that other users can benefit from it. Code is been provided as it is and we are not suggesting to use this code for production environment, however it gives you a good base to start with. If you want service support on this code please contact us through hello at nydax.com
 
 How to run this project :
 
