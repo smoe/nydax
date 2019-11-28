@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Buy Token</title>
+    <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h1 class="text-center">Buy Token</h1>
+
+          <form action="http://localhost:3004/v1/payment/" method="post" id="payment-form">
+            <div class="form-row">
+
+              <label for="tokenAmount">Choose your desired symbol:</label>
+              <select id="tokenSymbol" name="tokenSymbol">
+              </select>            
+              </br>
+              <label for="tokenAmount">Amount of token:</label>
+              <input name="tokenAmount" type="number" value="">
+
+            </div>
+          
+            <button>Next</button>
+          </form>
+
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-2.0.2.min.js"></script>
+
+    <script>
+    
+      $(document).ready(function(){
+
+        $.ajax({
+            type: "GET",
+            url: "http://localhost:3004/v1/token",
+            success: function(tokens){
+                $.each(tokens, function(i, token) {
+                  console.log(token);
+                  if(token.privateSaleEnabled) {
+                    var option = document.createElement("option");
+                    option.value = token.symbol;
+                    option.innerHTML = token.symbol; // whatever property it has
+                    $('#tokenSymbol')[0].appendChild(option);
+                  }
+                });
+            }, error: function(err) {
+              console.log(err);
+            }
+        });
+          
+      });
+
+    </script>
+  </body>
+</html>

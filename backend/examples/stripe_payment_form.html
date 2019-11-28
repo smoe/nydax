@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Stripe Payment</title>
+    <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h1 class="text-center">Payment Info</h1>
+
+          <form action="http://localhost:3004/v1/payment/submit" method="post" id="payment-form">
+            <div class="form-row">
+              <input id="reqKey" name="reqKey" hidden type="hidden" value="">
+
+              <label for="tokenSymbol">Your desired symbol:</label>
+              <span id="tokenSymbol"></span>       
+              
+              </br>
+
+              <label for="tokenAmount">Amount of token:</label>
+              <span id="tokenAmount"></span>
+
+              </br>
+
+              <label for="tokenPriceInCurrency">Price of each unit of token:</label>
+              <span id="tokenPriceInCurrency"></span>       
+              <span class="currencyAbbr"></span>
+              
+              </br>
+
+              <label for="currencyAmount">Total cost:</label>
+              <span id="currencyAmount"></span>
+              <span class="currencyAbbr"></span>              
+  
+              </br>
+              </br>
+
+              <!-- <input name="tokenToBuy" type="text" hidden value="INVO"> -->
+              <!-- <input name="tokenAmount" type="number" hidden value="2172"> -->
+
+              <label for="card-element">
+                Credit or debit card
+              </label>
+              <div id="card-element">
+                <!-- A Stripe Element will be inserted here. -->
+              </div>
+          
+              <!-- Used to display Element errors. -->
+              <div id="card-errors" role="alert"></div>
+            </div>
+          
+            <button>Submit Payment</button>
+          </form>
+
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-2.0.2.min.js"></script>
+    <script src="https://js.stripe.com/v3/"></script>
+
+    <script>
+    
+      $(document).ready(function(){
+        // TODO: register for an publishable key and replace below
+        var stripe = Stripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
+        
+        var elements = stripe.elements();
+
+        // Create an instance of the card Element.
+        var card = elements.create('card');
+
+        // Add an instance of the card Element into the `card-element` <div>.
+        card.mount('#card-element');
+
+        card.addEventListener('change', function(event) {
+          var displayError = document.getElementById('card-errors');
+          if (event.error) {
+            displayError.textContent = event.error.message;
+          } else {
+            displayError.textContent = '';
+          }
+        });
+
+        function stripeTokenHandler(token) {
+          // Insert the token ID into the form so it gets submitted to the server
+          var form = document.getElementById('payment-form');
+          var hiddenInput = document.createElement('input');
+          hiddenInput.setAttribute('type', 'hidden');
+          hiddenInput.setAttribute('name', 'stripeToken');
+          hiddenInput.setAttribute('value', token.id);
+          form.appendChild(hiddenInput);
+
+          // Submit the form
+          form.submit();
+        }        
+
+        // Create a token or display an error when the form is submitted.
+        var form = document.getElementById('payment-form');
+        form.addEventListener('submit', function(event) {
+          event.preventDefault();
+
+          stripe.createToken(card).then(function(result) {
+            if (result.error) {
+              // Inform the customer that there was an error.
+              var errorElement = document.getElementById('card-errors');
+              errorElement.textContent = result.error.message;
+            } else {
+              // Send the token to your server.
+              stripeTokenHandler(result.token);
+            }
+          });
+        });             
+      
+        var url = new URL(window.location.href);
+        var reqKey = url.searchParams.get("reqKey");
+
+        $.ajax({
+            type: "GET",
+            url: "http://localhost:3004/v1/payment?reqKey=" + reqKey,
+            success: function(data){
+              $('#tokenSymbol').html(data.tokenSymbol);
+              $('#tokenAmount').html(data.tokenAmount);
+              $('#currencyAmount').html(data.currencyAmount);
+              $('#tokenPriceInCurrency').html(data.tokenPriceInCurrency);
+              $('.currencyAbbr').html(data.currencyAbbr);
+              $('#reqKey').attr('value', reqKey);
+            }, error: function(err) {
+              console.log(err);
+            }
+        });   
+          
+      });
+
+    </script>
+  </body>
+</html>

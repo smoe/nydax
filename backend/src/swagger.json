@@ -1,0 +1,2000 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "NYDAX API",
+    "description": "NYDAX digital asset exchange endpoint."
+  },
+  "host": "ixp.nydax.com:2083",
+  "basePath": "/v1",
+  "schemes": ["https"],
+  "consumes": ["application/json"],
+  "produces": ["application/json"],
+  "paths": {
+    "/country": {
+      "get": {
+        "tags": ["Country"],
+        "summary": "Get list of all supported countries",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Countries"
+            }
+          }
+        }
+      }
+    },
+    "/currency": {
+      "get": {
+        "tags": ["Currency"],
+        "summary": "Get list of all supported currencies",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Currencies"
+            }
+          }
+        }
+      }
+    },
+    "/timezone": {
+      "get": {
+        "tags": ["Timezone"],
+        "summary": "Get list of all supported timezones",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Timezones"
+            }
+          }
+        }
+      }
+    },
+    "/token": {
+      "get": {
+        "tags": ["Token"],
+        "summary": "Get list of all NYDAX tokens.",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Tokens"
+            }
+          }
+        }
+      }
+    },
+    "/pair": {
+      "get": {
+        "tags": ["Pair"],
+        "summary": "Get list of all NYDAX trading pairs.",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Pairs"
+            }
+          }
+        }
+      }
+    },
+    "/auth/register": {
+      "post": {
+        "tags": ["Authentication"],
+        "summary": "Register in NYDAX.",
+        "parameters": [
+          {
+            "name": "Registration information",
+            "required": true,
+            "in": "body",
+            "description": "User's registration information",
+            "schema": {
+              "$ref": "#/definitions/Register"
+            }
+          }
+        ],
+        "produces": ["application/json"],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/auth/login": {
+      "post": {
+        "tags": ["Authentication"],
+        "summary": "Login into NYDAX.",
+        "parameters": [
+          {
+            "name": "Login credentials",
+            "required": true,
+            "in": "body",
+            "description": "User's login credentials",
+            "schema": {
+              "$ref": "#/definitions/Login"
+            }
+          }
+        ],
+        "produces": ["application/json"],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "type": "object",
+            "properties": {
+              "token": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/auth/verifyEmail/{token}": {
+      "get": {
+        "tags": ["Authentication"],
+        "summary": "Verify Email in NYDAX.",
+        "parameters": [
+          {
+            "name": "token",
+            "required": true,
+            "in": "path",
+            "description": "Email verification token",
+            "type": "string"
+          }
+        ],
+        "produces": ["application/json"],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/SuccessMessage"
+            }
+          },
+          "500": {
+            "description": "ERROR",
+            "schema": {
+              "$ref": "#/definitions/ErrorMessage"
+            }
+          }
+        }
+      }
+    },
+    "/auth/resetPasswordEmail": {
+      "post": {
+        "tags": ["Authentication"],
+        "summary": "Send reset password Email to user's Email.",
+        "parameters": [
+          {
+            "name": "email",
+            "required": true,
+            "in": "body",
+            "description": "Email",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "email": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
+        "produces": ["application/json"],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/SuccessMessage"
+            }
+          },
+          "500": {
+            "description": "ERROR",
+            "schema": {
+              "$ref": "#/definitions/ErrorMessage"
+            }
+          }
+        }
+      }
+    },
+    "/auth/resetPassword": {
+      "post": {
+        "tags": ["Authentication"],
+        "summary": "Reset user's password with token.",
+        "parameters": [
+          {
+            "name": "Credentials",
+            "required": true,
+            "in": "body",
+            "description": "token and new password",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "token": {
+                  "type": "string"
+                },
+                "password": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
+        "produces": ["application/json"],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/SuccessMessage"
+            }
+          },
+          "500": {
+            "description": "ERROR",
+            "schema": {
+              "$ref": "#/definitions/ErrorMessage"
+            }
+          }
+        }
+      }
+    },
+    "/auth/sendConfirmationEmail": {
+      "post": {
+        "tags": ["Authentication"],
+        "summary": "Send confirmation Email.",
+        "parameters": [
+          {
+            "name": "Information",
+            "required": true,
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "email": {
+                  "type": "string"
+                },
+                "isResend": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        ],
+        "produces": ["application/json"],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/SuccessMessage"
+            }
+          },
+          "500": {
+            "description": "ERROR",
+            "schema": {
+              "$ref": "#/definitions/ErrorMessage"
+            }
+          }
+        }
+      }
+    },
+    "/auth/smsToken": {
+      "post": {
+        "tags": ["Authentication"],
+        "summary": "Send two factor authentication token via SMS to user.",
+        "parameters": [
+          {
+            "name": "Phone Number",
+            "required": true,
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "phoneNumber": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
+        "produces": ["application/json"],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/SuccessMessage"
+            }
+          },
+          "500": {
+            "description": "ERROR",
+            "schema": {
+              "$ref": "#/definitions/ErrorMessage"
+            }
+          }
+        }
+      }
+    },
+    "/auth/smsTokenVerify": {
+      "post": {
+        "tags": ["Authentication"],
+        "summary": "Verify user's SMS token for two factor authentication.",
+        "parameters": [
+          {
+            "name": "token",
+            "required": true,
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "token": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
+        "produces": ["application/json"],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/SuccessMessage"
+            }
+          },
+          "500": {
+            "description": "ERROR",
+            "schema": {
+              "$ref": "#/definitions/ErrorMessage"
+            }
+          }
+        }
+      }
+    },
+    "/auth/getGoogleAuthenticator": {
+      "get": {
+        "tags": ["Authentication"],
+        "summary": "Verify user's SMS token for two factor authentication.",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "Authorization": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
+        "produces": ["application/json"],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "qrUrl": {
+                  "type": "string"
+                },
+                "secret": {
+                  "type": "object"
+                },
+                "isAuthenticatorEnable": {
+                  "type": "boolean"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "ERROR",
+            "schema": {
+              "$ref": "#/definitions/ErrorMessage"
+            }
+          }
+        }
+      }
+    },
+    "/auth/validateAuthenticatorSecret": {
+      "post": {
+        "tags": ["Authentication"],
+        "summary": "Validate Google two factor authentication secret.",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "Authorization": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          {
+            "name": "token",
+            "required": true,
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "token": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
+        "produces": ["application/json"],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/SuccessMessage"
+            }
+          },
+          "500": {
+            "description": "ERROR",
+            "schema": {
+              "$ref": "#/definitions/ErrorMessage"
+            }
+          }
+        }
+      }
+    },
+    "/auth/disableGoogleAuthenticator": {
+      "post": {
+        "tags": ["Authentication"],
+        "summary": "Disable Google authenticator.",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "Authorization": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          {
+            "name": "token",
+            "required": true,
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "token": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
+        "produces": ["application/json"],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/SuccessMessage"
+            }
+          },
+          "500": {
+            "description": "ERROR",
+            "schema": {
+              "$ref": "#/definitions/ErrorMessage"
+            }
+          }
+        }
+      }
+    },
+    "/auth/refreshToken": {
+      "post": {
+        "tags": ["Authentication"],
+        "summary": "Refresh JWT token.",
+        "parameters": [
+          {
+            "name": "authToken",
+            "required": true,
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "authToken": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
+        "produces": ["application/json"],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "token": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "ERROR",
+            "schema": {
+              "$ref": "#/definitions/ErrorMessage"
+            }
+          }
+        }
+      }
+    },
+    "/orderbook": {
+      "get": {
+        "tags": ["Order book"],
+        "summary": "Get order book.",
+        "parameters": [
+          {
+            "name": "pairName",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "pairName": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
+        "produces": ["application/json"],
+        "responses": {
+          "500": {
+            "description": "ERROR",
+            "schema": {
+              "$ref": "#/definitions/ErrorMessage"
+            }
+          }
+        }
+      }
+    },
+    "/generalState": {
+      "get": {
+        "tags": ["General Info"],
+        "summary": "Get all general information once.",
+        "produces": ["application/json"],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "500": {
+            "description": "ERROR",
+            "schema": {
+              "$ref": "#/definitions/ErrorMessage"
+            }
+          }
+        }
+      }
+    },
+    "/userState": {
+      "get": {
+        "tags": ["User specific Info"],
+        "summary": "Get all user specific information once.",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "Authorization": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
+        "produces": ["application/json"],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "500": {
+            "description": "ERROR",
+            "schema": {
+              "$ref": "#/definitions/ErrorMessage"
+            }
+          }
+        }
+      }
+    },
+    "/ticker": {
+      "get": {
+        "tags": ["Ticker"],
+        "summary": "Get last price tick data.",
+        "parameters": [
+          {
+            "name": "pairName",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "pairName": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
+        "produces": ["application/json"],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "500": {
+            "description": "ERROR",
+            "schema": {
+              "$ref": "#/definitions/ErrorMessage"
+            }
+          }
+        }
+      }
+    },
+    "/price/dayHistory": {
+      "get": {
+        "tags": ["Price"],
+        "summary": "Get daily price history.",
+        "parameters": [
+          {
+            "name": "pairId",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "pairId": {
+                  "type": "number"
+                }
+              }
+            }
+          }
+        ],
+        "produces": ["application/json"],
+        "responses": {
+          "500": {
+            "description": "ERROR",
+            "schema": {
+              "$ref": "#/definitions/ErrorMessage"
+            }
+          }
+        }
+      }
+    },
+    "/price/minuteHistory": {
+      "get": {
+        "tags": ["Price"],
+        "summary": "Get minute price history.",
+        "parameters": [
+          {
+            "name": "pairId",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "pairId": {
+                  "type": "number"
+                }
+              }
+            }
+          }
+        ],
+        "produces": ["application/json"],
+        "responses": {
+          "500": {
+            "description": "ERROR",
+            "schema": {
+              "$ref": "#/definitions/ErrorMessage"
+            }
+          }
+        }
+      }
+    },
+    "/price/tickHistory": {
+      "get": {
+        "tags": ["Price"],
+        "summary": "Get tick price history.",
+        "parameters": [
+          {
+            "name": "pairId",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "pairId": {
+                  "type": "number"
+                }
+              }
+            }
+          }
+        ],
+        "produces": ["application/json"],
+        "responses": {
+          "500": {
+            "description": "ERROR",
+            "schema": {
+              "$ref": "#/definitions/ErrorMessage"
+            }
+          }
+        }
+      }
+    },
+    "/price/weeklyChart": {
+      "get": {
+        "tags": ["Price"],
+        "summary": "Get charts weekly price data.",
+        "parameters": [
+          {
+            "name": "pairId",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "pairId": {
+                  "type": "number"
+                }
+              }
+            }
+          }
+        ],
+        "produces": ["application/json"],
+        "responses": {
+          "500": {
+            "description": "ERROR",
+            "schema": {
+              "$ref": "#/definitions/ErrorMessage"
+            }
+          }
+        }
+      }
+    },
+    "/wallet": {
+      "get": {
+        "tags": ["Wallet"],
+        "summary": "Get all wallets of the user.",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "Authorization": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
+        "produces": ["application/json"],
+        "responses": {
+          "500": {
+            "description": "ERROR",
+            "schema": {
+              "$ref": "#/definitions/ErrorMessage"
+            }
+          }
+        }
+      }
+    },
+    "/trade": {
+      "get": {
+        "tags": ["Trade History"],
+        "summary": "Get trade history of the user.",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "Authorization": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
+        "produces": ["application/json"],
+        "responses": {
+          "500": {
+            "description": "ERROR",
+            "schema": {
+              "$ref": "#/definitions/ErrorMessage"
+            }
+          }
+        }
+      }
+    },
+    "/favouritePairs": {
+      "get": {
+        "tags": ["Favourite Pairs"],
+        "summary": "Get favourite pairs of the user.",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "Authorization": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
+        "produces": ["application/json"],
+        "responses": {
+          "500": {
+            "description": "ERROR",
+            "schema": {
+              "$ref": "#/definitions/ErrorMessage"
+            }
+          }
+        }
+      }
+    },
+    "/favouritePairs/{id}": {
+      "post": {
+        "tags": ["Favourite Pairs"],
+        "summary": "Toggles specific pairId for the user.",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "Authorization": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "pair id",
+            "type": "number"
+          }
+        ],
+        "produces": ["application/json"],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/SuccessMessage"
+            }
+          },
+          "500": {
+            "description": "ERROR",
+            "schema": {
+              "$ref": "#/definitions/ErrorMessage"
+            }
+          }
+        }
+      }
+    },
+    "/favouriteCharts": {
+      "get": {
+        "tags": ["Favourite Charts"],
+        "summary": "Get favourite charts of the user.",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "Authorization": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
+        "produces": ["application/json"],
+        "responses": {
+          "500": {
+            "description": "ERROR",
+            "schema": {
+              "$ref": "#/definitions/ErrorMessage"
+            }
+          }
+        }
+      }
+    },
+    "/favouriteCharts/{id}": {
+      "post": {
+        "tags": ["Favourite Charts"],
+        "summary": "Add specific pairId as favourite charts for the user.",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "Authorization": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "pair id",
+            "type": "number"
+          }
+        ],
+        "produces": ["application/json"],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/SuccessMessage"
+            }
+          },
+          "500": {
+            "description": "ERROR",
+            "schema": {
+              "$ref": "#/definitions/ErrorMessage"
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": ["Favourite Charts"],
+        "summary": "Remove specific pairId as favourite charts of the user.",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "Authorization": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "pair id",
+            "type": "number"
+          }
+        ],
+        "produces": ["application/json"],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/SuccessMessage"
+            }
+          },
+          "500": {
+            "description": "ERROR",
+            "schema": {
+              "$ref": "#/definitions/ErrorMessage"
+            }
+          }
+        }
+      }
+    },
+    "/order/open": {
+      "get": {
+        "tags": ["Order"],
+        "summary": "Get all open orders of the user.",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "Authorization": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
+        "produces": ["application/json"],
+        "responses": {
+          "500": {
+            "description": "ERROR",
+            "schema": {
+              "$ref": "#/definitions/ErrorMessage"
+            }
+          }
+        }
+      }
+    },
+    "/order/history": {
+      "get": {
+        "tags": ["Order"],
+        "summary": "Get the order history of the user.",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "Authorization": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
+        "produces": ["application/json"],
+        "responses": {
+          "500": {
+            "description": "ERROR",
+            "schema": {
+              "$ref": "#/definitions/ErrorMessage"
+            }
+          }
+        }
+      }
+    },
+    "/order/new": {
+      "post": {
+        "tags": ["Order"],
+        "summary": "Open a new order for the user.",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "Authorization": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          {
+            "name": "Order",
+            "required": true,
+            "in": "body",
+            "schema": {
+              "type": "object"
+            }
+          }
+        ],
+        "produces": ["application/json"],
+        "responses": {
+          "500": {
+            "description": "ERROR",
+            "schema": {
+              "$ref": "#/definitions/ErrorMessage"
+            }
+          }
+        }
+      }
+    },
+    "/order/cancel": {
+      "post": {
+        "tags": ["Order"],
+        "summary": "Cancel a user's order.",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "Authorization": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          {
+            "name": "orderId",
+            "required": true,
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "orderId": {
+                  "type": "number"
+                }
+              }
+            }
+          }
+        ],
+        "produces": ["application/json"],
+        "responses": {
+          "500": {
+            "description": "ERROR",
+            "schema": {
+              "$ref": "#/definitions/ErrorMessage"
+            }
+          }
+        }
+      }
+    },
+    "/payment": {
+      "get": {
+        "tags": ["Payment"],
+        "summary": "Get the receipt of the registered bank payment.",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "Authorization": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          {
+            "name": "reqKey",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "reqKey": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
+        "produces": ["application/json"],
+        "responses": {
+          "500": {
+            "description": "ERROR",
+            "schema": {
+              "$ref": "#/definitions/ErrorMessage"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": ["Payment"],
+        "summary": "Register a new bank payment.",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "Authorization": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          {
+            "name": "Token Info",
+            "required": true,
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "tokenAmount": {
+                  "type": "number"
+                },
+                "tokenSymbol": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
+        "produces": ["application/json"],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "type": "object"
+          },
+          "500": {
+            "description": "ERROR",
+            "schema": {
+              "$ref": "#/definitions/ErrorMessage"
+            }
+          }
+        }
+      }
+    },
+    "/payment/submit": {
+      "get": {
+        "tags": ["Payment"],
+        "summary": "Process a bank payment.",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "Authorization": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          {
+            "name": "Credentials",
+            "required": true,
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "reqKey": {
+                  "type": "string"
+                },
+                "stripeToken": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
+        "produces": ["application/json"],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "type": "object"
+          },
+          "500": {
+            "description": "ERROR",
+            "schema": {
+              "$ref": "#/definitions/ErrorMessage"
+            }
+          }
+        }
+      }
+    },
+    "/transaction": {
+      "get": {
+        "tags": ["Transaction"],
+        "summary": "Get Transaction history of the user.",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "Authorization": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
+        "produces": ["application/json"],
+        "responses": {
+          "500": {
+            "description": "ERROR",
+            "schema": {
+              "$ref": "#/definitions/ErrorMessage"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": ["Transaction"],
+        "summary": "Get Transaction history of the user.",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "Authorization": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          {
+            "name": "Transaction",
+            "required": true,
+            "in": "body",
+            "type": "object"
+          }
+        ],
+        "produces": ["application/json"],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/SuccessMessage"
+            }
+          },
+          "500": {
+            "description": "ERROR",
+            "schema": {
+              "$ref": "#/definitions/ErrorMessage"
+            }
+          }
+        }
+      }
+    },
+    "/user/currency/{id}": {
+      "post": {
+        "tags": ["User"],
+        "summary": "Set base currency for the user.",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "Authorization": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "type": "number"
+          }
+        ],
+        "produces": ["application/json"],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/SuccessMessage"
+            }
+          },
+          "500": {
+            "description": "ERROR",
+            "schema": {
+              "$ref": "#/definitions/ErrorMessage"
+            }
+          }
+        }
+      }
+    },
+    "/user/timezone/{id}": {
+      "post": {
+        "tags": ["User"],
+        "summary": "Set timezone for the user.",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "Authorization": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "type": "number"
+          }
+        ],
+        "produces": ["application/json"],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/SuccessMessage"
+            }
+          },
+          "500": {
+            "description": "ERROR",
+            "schema": {
+              "$ref": "#/definitions/ErrorMessage"
+            }
+          }
+        }
+      }
+    },
+    "/user/invite": {
+      "post": {
+        "tags": ["User"],
+        "summary": "Invite people to join NYDAX.",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "Authorization": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          {
+            "name": "emails",
+            "in": "body",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        ],
+        "produces": ["application/json"],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/SuccessMessage"
+            }
+          },
+          "500": {
+            "description": "ERROR",
+            "schema": {
+              "$ref": "#/definitions/ErrorMessage"
+            }
+          }
+        }
+      }
+    },
+    "/user/profile": {
+      "post": {
+        "tags": ["User"],
+        "summary": "Get user profile.",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "Authorization": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
+        "produces": ["application/json"],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "type": "object"
+          },
+          "500": {
+            "description": "ERROR",
+            "schema": {
+              "$ref": "#/definitions/ErrorMessage"
+            }
+          }
+        }
+      }
+    },
+    "/user/authStatus": {
+      "post": {
+        "tags": ["User"],
+        "summary": "Get user's authentication information.",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "Authorization": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
+        "produces": ["application/json"],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "type": "object"
+          },
+          "500": {
+            "description": "ERROR",
+            "schema": {
+              "$ref": "#/definitions/ErrorMessage"
+            }
+          }
+        }
+      }
+    },
+    "/user/uploadProfilePic": {
+      "post": {
+        "tags": ["User"],
+        "summary": "Upload user's profile picture.",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "Authorization": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          {
+            "name": "profilePic",
+            "required": true,
+            "in": "formData",
+            "type": "file"
+          }
+        ],
+        "consumes": "multipart/form-data",
+        "produces": ["application/json"],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "type": "string"
+          },
+          "500": {
+            "description": "ERROR",
+            "schema": {
+              "$ref": "#/definitions/ErrorMessage"
+            }
+          }
+        }
+      }
+    },
+    "/user/identityVerification": {
+      "post": {
+        "tags": ["User"],
+        "summary": "Upload user's identity verification images.",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "Authorization": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          {
+            "name": "legalFirstName",
+            "in": "formData",
+            "type": "string"
+          },
+          {
+            "name": "legalLastName",
+            "in": "formData",
+            "type": "string"
+          },
+          {
+            "name": "legalMiddleName",
+            "in": "formData",
+            "type": "string"
+          },
+          {
+            "name": "countryId",
+            "in": "formData",
+            "type": "number"
+          },
+          {
+            "name": "driverLicenseFrontPic",
+            "in": "formData",
+            "type": "file"
+          },
+          {
+            "name": "driverLicenseBackPic",
+            "in": "formData",
+            "type": "file"
+          },
+          {
+            "name": "identityCardFrontPic",
+            "in": "formData",
+            "type": "file"
+          },
+          {
+            "name": "identityCardBackPic",
+            "in": "formData",
+            "type": "file"
+          },
+          {
+            "name": "passportPic",
+            "in": "formData",
+            "type": "file"
+          },
+          {
+            "name": "facePic",
+            "in": "formData",
+            "type": "file"
+          }
+        ],
+        "consumes": "multipart/form-data",
+        "produces": ["application/json"],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/SuccessMessage"
+            }
+          },
+          "500": {
+            "description": "ERROR",
+            "schema": {
+              "$ref": "#/definitions/ErrorMessage"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Country": {
+      "properties": {
+        "id": {
+          "type": "number",
+          "uniqueItems": true
+        },
+        "name": {
+          "type": "string"
+        },
+        "phoneCode": {
+          "type": "string"
+        }
+      }
+    },
+    "Currency": {
+      "properties": {
+        "id": {
+          "type": "number",
+          "uniqueItems": true
+        },
+        "name": {
+          "type": "string"
+        },
+        "abbreviation": {
+          "type": "string"
+        },
+        "usdRatio": {
+          "type": "string"
+        },
+        "symbol": {
+          "type": "string"
+        },
+        "symbolNative": {
+          "type": "string"
+        },
+        "decimalPrecision": {
+          "type": "number"
+        }
+      }
+    },
+    "Timezone": {
+      "properties": {
+        "id": {
+          "type": "number",
+          "uniqueItems": true
+        },
+        "name": {
+          "type": "string"
+        },
+        "tvCategory": {
+          "type": "string"
+        }
+      }
+    },
+    "Token": {
+      "properties": {
+        "id": {
+          "type": "number",
+          "uniqueItems": true
+        },
+        "name": {
+          "type": "string"
+        },
+        "contractAddress": {
+          "type": "string"
+        },
+        "symbol": {
+          "type": "string"
+        },
+        "decimalPrecision": {
+          "type": "number"
+        },
+        "logoUrl": {
+          "type": "string"
+        },
+        "marketCap": {
+          "type": "string"
+        },
+        "tokenCap": {
+          "type": "string"
+        },
+        "minimumTradeAmount": {
+          "type": "string"
+        },
+        "minimumWithdrawalAmount": {
+          "type": "string"
+        },
+        "withdrawalFee": {
+          "type": "string"
+        },
+        "enabled": {
+          "type": "boolean"
+        },
+        "confirmationRequired": {
+          "type": "number"
+        },
+        "usdPrice": {
+          "type": "string"
+        },
+        "privateSaleEnabled": {
+          "type": "boolean"
+        },
+        "maxAllowedAmountForBuy": {
+          "type": "number"
+        },
+        "createdAt": {
+          "type": "string"
+        },
+        "updatedAt": {
+          "type": "string"
+        },
+        "typeId": {
+          "type": "number"
+        },
+        "categoryId": {
+          "type": "number"
+        }
+      }
+    },
+    "Pair": {
+      "properties": {
+        "id": {
+          "type": "number",
+          "uniqueItems": true
+        },
+        "name": {
+          "type": "string"
+        },
+        "lastPrice": {
+          "type": "string"
+        },
+        "change24Price": {
+          "type": "string"
+        },
+        "high24": {
+          "type": "string"
+        },
+        "low24": {
+          "type": "string"
+        },
+        "vol24": {
+          "type": "string"
+        },
+        "minTradeAmount": {
+          "type": "number"
+        },
+        "tradeAmountDecimals": {
+          "type": "number"
+        },
+        "minTickSize": {
+          "type": "number"
+        },
+        "priceDecimals": {
+          "type": "number"
+        },
+        "minOrderValue": {
+          "type": "number"
+        },
+        "createdAt": {
+          "type": "string"
+        },
+        "updatedAt": {
+          "type": "string"
+        },
+        "baseTokenId": {
+          "type": "number"
+        },
+        "quoteTokenId": {
+          "type": "number"
+        },
+        "makerFee": {
+          "type": "number"
+        },
+        "takerFee": {
+          "type": "number"
+        },
+        "chartPriceHistory": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "change24Percentage": {
+          "type": "string"
+        }
+      }
+    },
+    "Register": {
+      "properties": {
+        "email": {
+          "type": "string",
+          "required": true
+        },
+        "password": {
+          "type": "string",
+          "required": true
+        },
+        "firstName": {
+          "type": "string",
+          "required": true
+        },
+        "lastName": {
+          "type": "string",
+          "required": true
+        },
+        "referralToken": {
+          "type": "string"
+        },
+        "captchaValue": {
+          "type": "string"
+        }
+      }
+    },
+    "Login": {
+      "properties": {
+        "email": {
+          "type": "string",
+          "required": true
+        },
+        "password": {
+          "type": "string",
+          "required": true
+        },
+        "smsToken": {
+          "type": "string",
+          "required": true
+        },
+        "twoFAToken": {
+          "type": "string",
+          "required": true
+        },
+        "captchaValue": {
+          "type": "string",
+          "required": true
+        }
+      }
+    },
+    "ErrorMessage": {
+      "type": "object",
+      "properties": {
+        "error": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "SuccessMessage": {
+      "type": "object",
+      "properties": {
+        "message": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "Countries": {
+      "type": "array",
+      "$ref": "#/definitions/Country"
+    },
+    "Currencies": {
+      "type": "array",
+      "$ref": "#/definitions/Currency"
+    },
+    "Timezones": {
+      "type": "array",
+      "$ref": "#/definitions/Timezone"
+    },
+    "Tokens": {
+      "type": "array",
+      "$ref": "#/definitions/Token"
+    },
+    "Pairs": {
+      "type": "array",
+      "$ref": "#/definitions/Pair"
+    }
+  }
+}

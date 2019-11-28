@@ -1,0 +1,1 @@
+(node:27933) [SEQUELIZE0003] DeprecationWarning: String based operators are deprecated. Please use Symbol based operators for better security, read more at http://docs.sequelizejs.com/manual/querying.html#operators
